@@ -1,10 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Chindu Sreedharan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chindu Sreedharan</title>
+  <style>
+    @font-face {
+      font-family: 'et-book';
+      src: url('reimagining-university/fonts/et-book-roman-line-figures.woff') format('woff');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'et-book-bold';
+      src: url('reimagining-university/fonts/et-book-bold-line-figures.woff') format('woff');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'et-book-italic';
+      src: url('reimagining-university/fonts/et-book-italic-line-figures.woff') format('woff');
+      font-style: italic;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'et-book', Georgia, serif;
+      background: #f9f8f4;
+      color: #222;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .corner { position: absolute; width: 14px; height: 14px; border: 1px solid #bbb; }
+    .tl { top: 1.5rem; left: 1.5rem; border-right: none; border-bottom: none; }
+    .tr { top: 1.5rem; right: 1.5rem; border-left: none; border-bottom: none; }
+    .bl { bottom: 1.5rem; left: 1.5rem; border-right: none; border-top: none; }
+    .br { bottom: 1.5rem; right: 1.5rem; border-left: none; border-top: none; }
+
+    .byline {
+      position: absolute; top: 1.7rem; right: 3rem;
+      font-size: 0.75rem; font-variant: small-caps;
+      letter-spacing: 0.1em; color: #999;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .byline:hover { color: #333; }
+
+    .centre {
+      position: absolute; top: 42%; left: 50%;
+      transform: translate(-50%, -50%); text-align: center;
+    }
+
+    .main-title {
+      font-family: 'et-book-bold', Georgia, serif;
+      font-size: 2.4rem; font-weight: 400;
+      color: #222; line-height: 1.25;
+      text-decoration: none; display: block;
+      transition: color 0.2s;
+    }
+    .main-title:hover { color: #666; }
+
+    .main-subtitle {
+      display: block;
+      font-family: 'et-book', Georgia, serif;
+      font-size: 1.5rem; font-weight: 400;
+      color: #888; margin-top: 0.4rem;
+    }
+
+    .read-arrow {
+      display: inline-block; margin-top: 1rem;
+      font-size: 0.75rem; font-variant: small-caps;
+      letter-spacing: 0.12em; color: #ccc;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .read-arrow:hover { color: #333; }
+
+    .walk-entry {
+      position: absolute; bottom: 12%; right: 7%;
+      max-width: 15rem; text-align: right;
+    }
+
+    .walk-title {
+      font-family: 'et-book-bold', Georgia, serif;
+      font-size: 1.1rem; font-weight: 400;
+      color: #555; line-height: 1.3;
+      text-decoration: none; display: block;
+      transition: color 0.2s;
+    }
+    .walk-title:hover { color: #111; }
+
+    .walk-standfirst {
+      font-family: 'et-book-italic', Georgia, serif;
+      font-size: 0.82rem; color: #aaa;
+      margin-top: 0.35rem; line-height: 1.5;
+    }
+
+    .walk-read {
+      display: inline-block; margin-top: 0.5rem;
+      font-size: 0.72rem; font-variant: small-caps;
+      letter-spacing: 0.1em; color: #ccc;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .walk-read:hover { color: #333; }
+  </style>
 </head>
 <body>
-<p>Coming soon.</p>
+
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <!-- Name links to BU academic profile -->
+  <a href="https://staffprofiles.bournemouth.ac.uk/display/csreedharan"
+     target="_blank" rel="noopener" class="byline">Chindu Sreedharan</a>
+
+  <!-- Main piece -->
+  <div class="centre">
+    <a href="https://chindusree.github.io/reimagining-university/" class="main-title">
+      The Age of Generation
+      <span class="main-subtitle">The End of Thought</span>
+    </a>
+    <a href="https://chindusree.github.io/reimagining-university/" class="read-arrow">→ Read</a>
+  </div>
+
+  <!-- Second piece bottom right -->
+  <div class="walk-entry">
+    <a href="https://chindusree.github.io/walk-to-the-heavens/" class="walk-title">
+      A Walk to the Heavens
+    </a>
+    <div class="walk-standfirst">Six started the ascent.<br>Only one survived.</div>
+    <a href="https://chindusree.github.io/walk-to-the-heavens/" class="walk-read">→ Read</a>
+  </div>
+
 </body>
 </html>
