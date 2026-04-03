@@ -1,0 +1,837 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="google-site-verification" content="C7on5e3oVYfzlSzTf-wCASfsliB02bGo-uBZWzYe2Jo" />
+
+<!-- Open Graph for LinkedIn, Facebook, Mastodon, Bluesky -->
+<meta property="og:title" content="The Age of Generation, the End of Thought">
+<meta property="og:description" content="A public essay on the future of the university in the world of AI.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chindusree.github.io/ReimaginingtheUniversity/">
+<meta property="og:image" content="https://chindusree.github.io/ReimaginingtheUniversity/assets/cover.jpg">
+<meta property="og:image:alt" content="Cover image for The Age of Generation, the End of Thought">
+  
+  <title>The Age of Generation, the End of Thought</title>
+
+<!-- General Metadata -->
+<meta name="description" content="An open essay on the future of the university in an age of AI—offered as a public manuscript for thoughtful engagement.">
+<meta name="author" content="Chindu Sreedharan">
+<meta name="robots" content="index, follow">
+
+
+<!-- Twitter/X Preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Age of Generation, the End of Thought">
+<meta name="twitter:description" content="An open manuscript on the university and synthetic thought. Reflective, rigorous, open to annotation.">
+<meta name="twitter:image" content="https://chindusree.github.io/ReimaginingtheUniversity/assets/cover.jpg">
+
+
+  <style>
+    @font-face {
+      font-family: 'et-book';
+      src: url('fonts/et-book-roman-line-figures.woff') format('woff');
+    }
+    body {
+      font-family: 'et-book', Georgia, serif;
+      font-size: 1.125rem;
+      background-color: #fdfcf9;
+      margin: 0;
+      padding: 5rem 1.5rem 4rem;
+      line-height: 1.6;
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #111;
+      position: relative;
+    }
+    .raised::first-letter {
+      font-size: 1.5em;
+      position: relative;
+      top: -0.2em;
+      font-weight: normal;
+      margin-right: 0.05em;
+    }
+    .byline {
+      font-size: 1.3rem;
+      letter-spacing: 0.06em;
+      font-variant: small-caps;
+      color: #444;
+      margin-bottom: 2.2rem;
+    }
+    .byline span {
+      font-weight: normal;
+    }
+    .first-word {
+      font-variant: small-caps;
+      letter-spacing: 0.04em;
+      font-weight: normal;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 1.8rem;
+      line-height: 1.5;
+    }
+    .section-number {
+      text-align: center;
+      font-size: 1.1rem;
+      font-variant: small-caps;
+      color: #666;
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+    .subsection {
+      margin-top: 2.5rem;
+    }
+    .credits-note {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #666;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      padding-top: 1.2rem;
+      font-style: normal;
+    }
+    .sketch-title {
+      font-style: italic;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #555;
+      margin: 1.2rem 0 0.75rem;
+    }
+    nav.side-nav.desktop {
+      position: fixed;
+      top: 4rem;
+      left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      font-variant: small-caps;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      color: #444;
+      z-index: 10;
+    }
+    nav.side-nav.desktop a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #ddd;
+      text-underline-offset: 3px;
+    }
+    nav.side-nav.desktop a:hover {
+      color: #000;
+      text-decoration-color: #999;
+    }
+    p a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #bbb;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+    p a:hover {
+      color: #000;
+      text-decoration-color: #777;
+    }
+    em a {
+      font-style: italic;
+    }
+    .mobile-top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.25rem;
+      background-color: #fdfcf9;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 0.75rem;
+      font-family: 'et-book', Georgia, serif;
+    }
+    .mobile-nav-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #444;
+      cursor: pointer;
+      padding: 0.2rem;
+      line-height: 1;
+    }
+    nav.side-nav.mobile {
+      display: none;
+      position: fixed;
+      top: 2.5rem;
+      right: 1.5rem;
+      background-color: #fdfcf9;
+      padding: 1rem;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 998;
+      font-variant: small-caps;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    nav.side-nav.mobile a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #ddd;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    nav.side-nav.mobile a:hover {
+      color: #000;
+      text-decoration-color: #999;
+    }
+    nav.side-nav.mobile.active {
+      display: flex;
+    }
+    @media (max-width: 900px) {
+      nav.side-nav.desktop {
+        display: none;
+      }
+    }
+    @media (min-width: 901px) {
+      .mobile-top-bar, nav.side-nav.mobile {
+        display: none;
+      }
+    }
+    .sidenote-number a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .sidenote-number sup {
+      font-size: 0.75rem;
+      color: #999;
+      vertical-align: super;
+      position: relative;
+      top: -0.3em;
+      font-weight: normal;
+    }
+    .sidenote {
+      float: right;
+      clear: right;
+      margin-right: -240px;
+      width: 220px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      position: relative;
+      color: #666;
+    }
+    .sidenote::before {
+      content: attr(data-number) ". ";
+      font-size: 0.75rem;
+      color: #999;
+    }
+    .sidenote.collapsible {
+      display: none;
+    }
+    .sidenote.active {
+      display: block;
+      margin-top: 2rem;
+      clear: right;
+      position: static;
+    }
+    @media (max-width: 900px) {
+      .sidenote { display: none !important; }
+      #endnotes { display: block; margin-top: 3rem; }
+    }
+    @media (min-width: 901px) {
+      #endnotes { display: none; }
+    }
+    #endnotes {
+      margin-top: 3rem;
+    }
+    #endnotes h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #444;
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+    #endnotes sup {
+      font-size: 0.75rem;
+      color: #999;
+    }
+    #endnotes a.return-link {
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #000;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 0.35rem;
+      font-family: inherit;
+    }
+    #endnotes a.return-link:hover {
+      text-decoration: underline;
+      text-decoration-color: #999;
+    }
+    html {
+      scroll-padding-top: 3rem;
+    }
+
+
+  .footer-heading {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #555;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer-paragraph {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin-top: 0;  /* ← prevents visual gap */
+}
+
+.footer-paragraph a {
+  color: #666;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-paragraph a:hover {
+  color: #000;
+  text-decoration-color: #999;
+}
+
+
+  </style>
+<script>
+  function toggleSidenote(id, event) {
+    if (window.innerWidth > 900) {
+      const note = document.getElementById(`sidenote-${id}`);
+      if (note.classList.contains('active')) {
+        note.classList.remove('active');
+      } else {
+        const allNotes = document.querySelectorAll('.sidenote');
+        allNotes.forEach(n => n.classList.remove('active'));
+        note.classList.add('active');
+      }
+      if (event) event.preventDefault();
+    }
+  }
+
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidenotes = document.querySelectorAll('.sidenote');
+    sidenotes.forEach((note, index) => {
+      const number = index + 1;
+      note.setAttribute('id', `sidenote-${number}`);
+      note.setAttribute('data-number', number);
+
+      const ref = document.getElementById(`ref-${number}`);
+      if (ref) {
+        ref.innerHTML = `<a href='#endnote-${number}' onclick='toggleSidenote(${number}, event)'><sup>${number}</sup></a>`;
+      }
+    });
+
+    const endnotesContainer = document.getElementById('endnotes');
+    if (endnotesContainer) {
+      endnotesContainer.innerHTML = '<h2>Endnotes</h2>';
+      sidenotes.forEach((note, index) => {
+        const number = index + 1;
+        const endnote = document.createElement('div');
+        endnote.setAttribute('id', `endnote-${number}`);
+        endnote.innerHTML = `
+          <p><sup>${number}</sup> ${note.innerHTML}
+            <a class="return-link" href="#ref-${number}">&#8617;</a>
+          </p>`;
+        endnotesContainer.appendChild(endnote);
+      });
+    }
+
+    // ✅ Add tap-outside-to-close mobile nav functionality
+    document.addEventListener('click', function (event) {
+      const nav = document.getElementById('mobileNav');
+      const toggle = document.querySelector('.mobile-nav-toggle');
+      if (!nav || !toggle) return;
+
+      const isClickInsideNav = nav.contains(event.target);
+      const isClickOnToggle = toggle.contains(event.target);
+
+      if (nav.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
+        nav.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+
+    <!-- Other scripts above -->
+  <script>
+    // your sidenote + mobile nav toggle code
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3499804f357e4e2c93d3b817c86f074b"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</head>
+
+</head>
+
+<body>
+  <div class="mobile-top-bar">
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">≡</button>
+  </div>
+  <nav class="side-nav mobile" id="mobileNav">
+    <a href="#prologue">Prologue</a>
+    <a href="#genesis">Genesis</a>
+    <a href="#unmaking">Unmaking</a>
+    <a href="#interruption">Interruption</a>
+    <a href="#descent">Descent</a>
+    <a href="#remaking">Remaking</a>
+    <a href="#epilogue">Epilogue</a>
+  </nav>
+  <nav class="side-nav desktop">
+    <a href="#prologue">Prologue</a>
+    <a href="#genesis">Genesis</a>
+    <a href="#unmaking">Unmaking</a>
+    <a href="#interruption">Interruption</a>
+    <a href="#descent">Descent</a>
+    <a href="#remaking">Remaking</a>
+    <a href="#epilogue">Epilogue</a>
+  </nav>
+  <header>
+    <h1>The Age of Generation, the End of Thought</h1>
+    <h2 class="subtitle">What place can the university—once a shelter for thought—claim in the new world of synthetic thinking?</h2>
+    
+    <div class="byline">
+  <a href="https://staffprofiles.bournemouth.ac.uk/display/csreedharan#:~:text=Chindu%20specialised%20in%20crisis%20news,holds%20a%20PhD%20in%20journalism" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+    <span>C</span>hindu <span>S</span>reedharan
+  </a>
+</div>
+    
+  </header>
+  <!-- INSERT FULL PROLOGUE SECTION HERE -->
+  <section id="prologue">
+    <div class="section-number">Prologue</div>
+    <p class="raised">Is the university a place? Was it ever, really?</p>
+    
+
+    <p>We tend to think of it as a campus: ivy-covered walls, endless corridors, lecture halls with poor sightline, a library. But even at its most concrete, it was always something more.</p>
+  
+    <p>What distinguished the university was not its architecture—though that, too,  was often remarkable—but its role as a site of intellectual pursuit, and the structure it provided for that labour: the rules, forms, and disciplines that gave inquiry rigour and replicability. It was a system that gave shape to the chaos of our thoughts, a scaffolding that enabled us to transform over time. Place mattered, then, not as enclosure, but as ground: a foundation for a culture of thinking to emerge—through ritual, repetition, and institutional memory. Long before the rise of digital connectivity, the university was anchored in what sociologist Manuel Castells would later describe as a “space of places”<span id="ref-1" class="sidenote-number"></span><span class="sidenote collapsible">In <em>The Rise of the Network Society</em>, Manuel Castells  distinguishes between the space of places—physical, situated, embedded in local social structures—and the space of flows: a new spatial logic shaped by digital networks, global circulation, and the abstracted movement of information. The university, long rooted in the former, has increasingly been drawn into the latter. I return to this—and its implications for knowledge, presence, and power—in a later section.</span>: bounded, situated, present.</p>
+  
+    <p>A long time ago, when I began my PhD, my supervisor—half Gandalf, half Bhishmacharya—told me the first six months would be marked by confusion. Not the kind I could shake off, but the kind I would need to stay with: days when nothing connects, when texts resist interpretation, when the thread of inquiry wraps itself around you, twisted and tightening. At the time, I thought he was preparing me for the hardship of the academy. Later, I understood he was describing the texture of intellectual labour.</p>
+    
+    <p>Confusion isn’t confined to the university. It is a shared trait of deep work—the hours spent on an idea, sorting signal from noise, trying to say what isn’t yet clear, even to yourself. Over time, I came to understand that confusion was not the opposite of clarity; it was its precondition. The university offered a way to move towards knowledge. It gave you the courage, the epistemological confidence, that if you stayed with uncertainty long enough, something coherent would emerge. Confusion, then, was not a failure of thinking, but its method.</p>
+ 
+    <p>Some weeks ago, I sat in a meeting of PhD supervisors. The conversation turned—as it often does now—to students using AI to write. My colleague, wise and bespectacled, parodically professorial except for the missing elbow patches, said flatly: AI just can’t produce doctoral-level work. No one disagreed. Which, in academia, is saying something.</p> 
+    
+    <p>He was mostly right. He was talking, primarily, about writing. The outputs are often fluent in form but hollow at the core—not, I think, because current models are incapable of decent writing, but because most students don’t yet know how to use them well. In the hands of a doctoral candidate adept with generative AI, I suspect, a passable thesis could be swiftly assembled.</p>
+    
+    <p>But there is danger in separating writing from thinking. Writing, I would argue, is not the afterthought of thought. It <em>is</em> thinking. Often, it is the discipline through which thought crystallises—through return, through revision, through reordering, we impose coherence on chaos.</p>
+
+   
+    <p>What’s deeply unsettling is not that AI<span id="ref-2" class="sidenote-number"></span><span class="sidenote collapsible">I use 'AI' as a broad term in this essay. In the early sections, it refers primarily to generative systems—models that simulate fluency, pattern, and response, such as large language models. In later sections, where I sketch future possibilities, the term might encompass a wider set of computational systems, including robotics.</span> can produce fluent, plausible ‘scholarship’. It’s that it can simulate the process we once believed gave rise to such work. It assembles arguments, stages counterpoints, anticipates objections. It performs the <em>gestures</em> of thought—without submitting the user to the confusion, the hesitation, the slow wrestle that accompanies the making of knowledge. And in systems where ‘performance’ and ‘articulation’ are paramount—and we are in one, with scaffolding built to reward fluency over formation—that simulation may not just be sufficient. It may even be seen as superior.</p>
+  
+  
+
+    <p>Concrete expressions of that orientation may already be visible—in what the university no longer makes room for, in what it now increasingly offers: alien credentials, lighter, faster, more portable than even PDFs, designed to serve a global market, but steeped in the epistemic culture of the place that produced them. Along streamlined pathways, smoothed for success, they seem to extend the university’s model outward, rather than co-creating with diverse contexts. One could argue that the guardrails of chaos have been cleared away, so that failure—once the fulcrum of learning—is no longer an option, and the learner falls, headlong, into certainty. Confusion is no longer friend. And place, once a condition for slow, situated thought, appears to survive mostly in name—its texture lost, its identity flattened into a brand: exportable, extractive.</p>
+    
+    <p>In this world of anti-confusion, what is the logic that AI brings to the university? Much of the academy frames it as a threat. But what if the real danger is not that it disrupts, but that it doesn’t disrupt <em>enough?</em> That it accelerates a logic the university<span id="ref-3" class="sidenote-number"></span><span class="sidenote collapsible">Throughout, I refer to ‘the university’ in the singular—not to flatten its diverse histories, but to speak to the shared logics and structures that have come to define it as a global form.</span> has now embraced: one that privileges certainty over uncertainty, performance over process?</p>
+    
+    <p>In this essay, I explore that possibility. AI entered the academy at a moment of institutional precarity—post-Covid, and under the weight of long-building pressures. Falling enrolments, proliferating credentials, and a "finite game"<span id="ref-4" class="sidenote-number"></span><span class="sidenote collapsible">The phrase is from James P Carse’s <em>Finite and Infinite Games: A Vision of Life as Play and Possibility</em>, which distinguishes between finite games—played to win—and infinite games—played to continue the play. The university, in this framing, increasingly resembles the former.</span> played across transnational markets had created an environment in which too many degrees chased too few students—and too little time remained to ask what the university was still for. In this climate, AI’s arrival was met with a mix of reactions: moral panic, technocratic enthusiasm, and an institutional apparatus quick to accommodate a technology it barely understood. That convergence is the terrain this essay traces.</p>
+    
+    <p>In this age of generation, what kind of university is AI helping to consolidate—and what kind might still be reimagined, if we’re willing to slow down and ask harder questions?</p>
+    
+    <p>I begin with the university—before it became the institution we know today—tracing its deep and plural beginnings, from ancient centres of learning in Asia and North Africa to the medieval guilds of Europe. I ask what these early forms were built to serve, follow how their purposes evolved across traditions, and consider how place once offered a structure for sustained thought.</p>
+    
+    <p>I then turn to the structural changes of recent decades: the spread of credentialism, the ascendancy of management, and the rise of what we might call <em>performative education</em>—where fluency is rewarded more than depth, and polish often stands in for process. How have these changes reshaped the university’s expectations—of students, of knowledge, of learning itself?</p>
+    
+    
+    <p>In the third section, I examine AI’s arrival—not only the systems, but the ripple of reactions it has provoked across pedagogy, policy, and institutional life. What does this moment reveal about the university’s deeper orientation? What kinds of thinking are being challenged, and what kinds quietly preserved?</p>
+    
+    <p>From there, I track the deeper realignments now underway: the illusion of adaptation, the slow erosion of legitimacy, and the long-term trajectories now gathering force.</p>
+    
+    <p>In the final section, the essay looks forward—to what the university <em>could</em> become. I offer eight principles, to hold in our collective mind. From these, the essay opens outward again, sketching possibilities for how the university might live in a changed world.</p>
+  </section>
+
+
+   <!-- INSERT FULL PROLOGUE SECTION HERE -->
+
+ 
+  <section id="genesis">
+    <div class="section-number">Genesis</div>
+  
+    <p><span class="first-word">The story we</span> often tell of the university begins somewhere around the eleventh century in Europe. But the idea of a place for higher learning stretches back further, across multiple traditions and epistemic lineages.</p>
+  
+    <p>Long before Bologna or Paris, scholarly communities flourished across Asia, North Africa, and the Islamic world. From Nalanda in eastern India to Al-Qarawiyyin in Morocco, from Taxila in present-day Pakistan to Al-Azhar in Cairo, these were institutions of inquiry—shaped by the cultural and spiritual logics of their time. They offered instruction and infrastructure: libraries, debate halls, traditions of commentary and critique. Some were led by iconic figures less visible in modern retellings.</p>
+  
+    <p>In fifth-century Alexandria, for instance, the philosopher and mathematician Hypatia taught, defying both gender norms and rising orthodoxy. Such was her popularity that townsfolk often crowded her door—“a great crush,” “a confusion of men and of horses”—waiting for her address<span id="ref-5" class="sidenote-number"></span><span class="sidenote collapsible">In <em><a href="https://doi.org/10.1080/10724117.2009.11974823" target="_blank">Who's Hypatia? Whose Hypatia Do You Mean?</a></em>, Hardy Grant draws on historical accounts describing how citizens and students crowded outside Hypatia’s home—on horseback and foot—eager to hear her speak.</span>.</p>
+  
+    <p>In ninth-century Fez, Fatima al-Fihri founded what is often cited as the world’s oldest continually operating university. And at the great monastic halls of Nalanda, as early as the sixth and seventh century, thousands of students from as far as Korea and China gathered to study logic, grammar, and medicine—often through multi-day debates in red-brick courtyards<span id="ref-6" class="sidenote-number"></span><span class="sidenote collapsible">In <em><a href="https://cgscholar.com/bookstore/works/the-ancient-nalanda-mahavihara" target="_blank">The Ancient Nalanda Mahavihara: The Beginning of Institutional Learning in Ancient Indian Education System</em></a>, Pintu Kumar draws on historical accounts from travellers such as Hiuen Tsang and I-Tsing to describe Nalanda’s international student body, competitive admissions interviews, and a pedagogical culture centred on oral debate.</span>. Admission was selective: fewer than one in three passed the equivalent of a modern academic interview—conducted by senior scholars who questioned applicants on foundational texts—in a tradition now quietly disappearing from the university.</p>
+  
+    <p>What emerged in Europe, then, was not the first site of higher learning—but an evolution, forged in a different cultural and political crucible. Like Nalanda, it was self-governing. But where monastic centres were guided by councils of scholars and spiritual traditions, the European university was shaped by guild structures, legal privileges, and the growing reach of Church and Crown. It credentialed, codified, and professionalised. It trained clerics, jurists, and physicians, and organised the pursuit of knowledge into faculties, degrees, and disciplines. This was its innovation: the university not just as a site of learning, but as a structure for organising it—with its own rhythm, rites, and rituals to sustain inquiry and confer legitimacy.</p>
+  
+    <p>This form gave rise to several traditions, each carrying a different view of what the university was for. The Oxbridge model, most famously articulated by John Henry Newman in the mid-nineteenth century, imagined the university as a space for liberal education and the formation of the gentleman. In <a href=https://www.gutenberg.org/files/24526/24526-pdf.pdf><em>The Idea of a University</em></a>, Newman insisted that the aim was not research, but cultivation: a habit of mind shaped through breadth, reason, and exposure to multiple disciplines. Education, for Newman, was a process of steady shaping. It brought “the mind into form”, much as training brings muscle into definition. “This is real cultivation of mind,” he wrote, “and I do not deny that the characteristic excellences of a gentleman are included in it.”</p>
+  
+    <p>In this vision, knowledge was not pursued for its own sake. It was extended and refined through exposure to well-ordered thought. Newman prized formation over discovery: a vision of intellectual and moral cultivation within a closed, orderly environment. This vision of cultivation would travel—often uncritically—alongside the empire.</p>
+  
+    <p>By the late nineteenth century, three dominant models<span id="ref-7" class="sidenote-number"></span><span class="sidenote collapsible">See S Datta’s <em>A History of the Indian University System</em> for a discussion.</span> of the university had emerged in the West—each shaped by its own cultural and political imperatives. The Newmanian model prioritised liberal education and the moral formation of individuals. The Napoleonic model, forged in the aftermath of the French Revolution, aligned the university with the state, focused on credentialing and training professionals for civil administration. And the Humboldtian model, emerging from Germany, placed original research at the centre of academic life—fusing teaching and inquiry in the name of <em>Bildung</em>, the development of the individual through self-directed intellectual pursuit.</p>
+  
+    <p>Writing in the late twentieth century, Jürgen Habermas returned to the Humboldtian vision—first to dismantle the impracticality of its “narcissistic self-enclosed process of research and teaching”, then to ask what might still be salvaged. He <a href="https://www.jstor.org/stable/488273" target="_blank">critiqued</a> the classical reformers for believing that a modern university could still be bound by a single guiding idea. “The assertion of unbroken faithfulness to Humboldt”, he wrote, “is the life-lie of our universities.”</p>
+  
+    <p>That coherence, he argued, had long since broken down under the weight of disciplinary silos, systemic differentiation<span id="ref-8" class="sidenote-number"></span><span class="sidenote collapsible">Habermas refers to the way social systems (eg the economy, law, science) become increasingly specialised and autonomous. In the university, this manifests as fragmentation: research, teaching, and professional training follow distinct logics, often disconnected from shared cultural or democratic aims.</span>, and market logic. And yet something endured. The university’s functions—research, education, public discourse, and cultural reflection—still survived, woven together in learning processes. Its coherence, he suggested, lay not in a unifying ideal, but in “the discursive forms of scientific argumentation”. For Habermas, the university could still be a site of critical thought and judgement—not in the idealist, inward-looking form the reformers had imagined, but by engaging and communicating with society to enlighten culture, politics, and science.</p>
+  
+    <p>If Habermas saw discursive practices—“communicative rationality”, as he called it—as a way to hold the university’s functions together, others saw the fragmentation as natural evolution. In the United States, the university expanded into a “multiversity”—a term promoted by Clark Kerr in the 1960s. “The university started as a single community—a community of masters and students,” Kerr wrote in <a href=https://ia802907.us.archive.org/14/items/in.ernet.dli.2015.114303/2015.114303.The-Uses-Of-The-University_text.pdf target="new"><em>The Uses of the University</em></a>. The multiversity is “not one community but several”,  “its edges fuzzy”, held together “by a common name, a common governing board”—and, as he noted with wry precision, a “common grievance over parking”.</p>
+  
+    <p>Unlike the self-contained model of the classicists, Kerr’s multiversity was not a sanctuary that stood apart from the society, but an institution deeply embedded within it—one it served “almost slavishly”, even as it criticised it “sometimes unmercifully”. It linked arms with industry, defence, and government. It absorbed the priorities of the Cold War state and the post-war economy. It held contradictions and responded to the competing demands of a complex society. In this, Kerr captures a dynamic that would later resonate with thinkers such as Habermas: the university was not sheltered from society, but recalibrated to serve it—practically, intellectually, and institutionally.</p>
+  
+    <p>What emerges across these diverse traditions—from Alexandria to Nalanda, from Newman to Humboldt and Habermas, and Kerr—is not a single, stable idea of the university, but a shared wager: that thought is worth protecting. The university offered the architecture, rhythm and freedom to sustain it. It offered spaces in which thinking, reasoning, and reflection could unfold, where contradictions and confusion could exist and be worked through.</p>
+  
+    <p>The Alexandrian Museum of Hypatia’s time offered stipends and space for the cultivation of thought. Its scholars walked together, debated together, dined together. Nalanda’s monastic architecture created pockets of unhurried study, where students rehearsed argument, reflection, and intellectual hospitality. Newman, writing centuries later, imagined the university as a protected sphere of liberal cultivation: “a place of teaching universal knowledge,” in which the goal was not application, but formation—a “habit of mind” marked by moderation, breadth, and coherence. For Humboldt, the pursuit of intellectual and moral self-formation was critical. For Habermas, the university remained a site of learning processes vital to democratic life.</p>
+  
+    <p>All understood thinking does not happen by accident. It asks for form. For friction. For time. The university, at its strongest, offered those conditions, defending it across generations.</p>
+  
+    <p>Until, almost imperceptibly, those conditions began to erode.</p>
+  </section>
+
+
+  <!-- INSERT FULL UNMAKING SECTION HERE -->
+    <!-- UNMAKING SECTION -->
+<section id="unmaking">
+  <div class="section-number">Unmaking</div>
+
+  <p><span class="first-word">By the time</span> Habermas presented the university as a site of communicative reason, the conditions that made such reason possible—time, reflection, institutional autonomy—were beginning to disappear. What he had warned against in <a href="https://ia600507.us.archive.org/15/items/jurgen-habermas-religion-and-rationality-essays-on-reason-god-and-modernity/Jurgen%20Habermas%20-%20The%20Theory%20of%20Communicative%20Action,%20Vol.%20Two%20-%20Polity.pdf" target="_blank"><em>The Theory of Communicative Action</em></a>—the erosion of critical reflection and the rise of a more instrumental logic, in which knowledge is valued for what it delivers rather than what it means—had begun to shape the university’s everyday grammar. Where earlier ideals emphasised what I'll refer to as <em>substantive education</em>—concerned with the cultivation of judgement, interiority, and thought—the newer model privileged performance. What mattered was not the shaping of a discerning mind, but the fluency of its display. Such <em>performative education</em>, calibrated to reward output over understanding, would come to define the decades that followed. Confusion, once a companion of deep thought, had become a sign of failure<span id="ref-9" class="sidenote-number"></span><span class="sidenote collapsible">I use substantive and performative education to distinguish between modes of learning oriented toward depth, reflection, and intellectual formation, and those focused on fluency, output, and display. The contrast is interpretive, not disciplinary.</span>.</p>
+
+  <p>The university entered a sweeping phase of expansion after World War II—what sociologist Talcott Parsons termed an “educational revolution” in <em>The American University</em>. Across continents, governments turned to higher education to expand access, train civil servants, stabilise democracies, and fuel economic growth. In <a href="https://nces.ed.gov/pubs93/93442.pdf" target="_blank">India</a>, the number of higher education institutions rose from fewer than 30 in 1947 to more than 500 by the end of 2010. In <a href="https://www.elibrary.imf.org/view/journals/022/0025/001/article-A007-en.xml" target="_blank">sub-Saharan Africa</a>, enrolment grew from 21,000 in 1960 to more than 430,000 by 1983. In <a href="https://nces.ed.gov/programs/digest/d19/tables/dt19_303.70.asp?current=yes&utm_source=chatgpt.com" target="_blank">the US</a>, it climbed from 2.3 million in 1947 to approximately eight million by 1970. In Europe, participation rates rose from around five per cent after the war to nearly 30 per cent by 2000. Globally, higher education enrolments grew from 13 million in 1960 to more than 130 million by the mid-2000s.</p>
+
+  <p>This expansion did more than increase head counts; it redrew the university’s internal logic. Institutions once defined by teaching and scholarship were now tasked with delivering social mobility, absorbing growing youth populations, fuelling industrial innovation, and responding to fast-changing labour markets. As Kerr observed, the modern university had become a composite structure whose overlapping functions—teaching, research, credentialing, economic service—were often in tension. What had once been anchored by a shared academic ethos was now held together by managerial logic and administrative design. This, sociologist Martin Trow warned in <a href="https://files.eric.ed.gov/fulltext/ED091983.pdf" target="_blank"><em>Problems in the Transition from Elite to Mass Higher Education</em></a>, was not merely more of the same. It marked a shift. The university, in Trow’s view, had become more impersonal, more bureaucratic, more exposed to political pressure, and more vulnerable to economic rationalisation.</p>
+
+  <p>By the late 1980s, the university had grown large enough to require new instruments of oversight. Public funding, once anchored in trust and academic autonomy, began to tighten—pressured by fiscal austerity, political scepticism, and a growing belief that higher education should serve the market. Expectations rose in parallel. Institutions were now asked to demonstrate value through measurable outcomes. The language shifted: efficiency, accountability, delivery, impact. In the United Kingdom, the 1986 Research Assessment Exercise marked a turning point: departments were ranked, and funding tied to research performance. Similar reforms swept Europe, Australia, and parts of Asia, as governments embraced what <a href="https://www.jstor.org/stable/1503583" target="_blank">Guy Neave described</a> as a moment of truth for universities: the rise of the Evaluative State—a regime in which worth was audited and quantified<span id="ref-10" class="sidenote-number"></span><span class="sidenote collapsible">In <em><a href="https://doi.org/10.1111/j.1467-954X.2012.02077.x" target="_blank">Living with the h-index</em></a>, Roger Burrows argues that performance metrics no longer measure value but constitute it.</span> At first, metrics served improvement. Over time, they became more than measures. What could be counted became what counted. Performance ceased to signal quality. It became its proxy.</p>
+
+  <p>By the early 2000s, the university had recoded itself. It was competing publicly, globally—often brutally. International rankings—QS, Times Higher Education, and Shanghai—became the currency of institutional prestige, transforming universities into fierce contestants in a steadily darkening red ocean,<span id="ref-11" class="sidenote-number"></span><span class="sidenote collapsible">Red ocean, in business strategy literature, refers to saturated competitive fields in which institutions compete on the same terms. See <a href="https://hbr.org/2004/10/blue-ocean-strategy" target="_blank">this HBR overview.</a>:</span> a saturated, zero-sum arena where advances by one institution came at the cost of another. These rankings, though presented as objective measures, relied on narrow indicators<span id="ref-12" class="sidenote-number"></span><span class="sidenote collapsible">For an overview, see Ellen Hazelkorn, <em>The Impact of Global Rankings on Higher Education</em>. OECD Education Working Papers, No. 59 (2011). <a href="https://unesdoc.unesco.org/ark:/48223/pf0000181653" target="_blank">UNESCO link</a></span>: research income, faculty credentials, citation counts, and publication in English-language journals. Above all, they promoted prestige-seeking.</p>
+
+  <p>The effects were profound. What emerged was not a pluralistic space of intellectual competition, but a reputational economy. Curricula were realigned. Hiring practices followed. Research agendas narrowed toward what could be published, cited, and ranked. League tables, as Ellen Hazelkorn observed, became “a powerful normative template,” instilling a culture of ‘mimicry’<span id="ref-13" class="sidenote-number"></span><span class="sidenote collapsible">I draw here from Homi Bhabha’s account of mimicry in <em>The Location of Culture</em>, where he describes it as a strategy of resemblance that is never complete—an ambivalent form of imitation that both enacts and unsettles authority. In the context of global higher education, mimicry offers a lens on the structural pressures facing non-Western—and lower-ranking Western—institutions within the global rankings regime.</span> in which institutions sought to emulate elite research universities—typically Western, English-speaking, and highly ranked.</p>
+
+  <p>Institutional identities were increasingly submerged beneath the pursuit of world-class status. Even the older ideals of the examining university<span id="ref-14" class="sidenote-number"></span><span class="sidenote collapsible">The University of London pioneered the model of the examining university in the nineteenth century. Though far from Newman’s ideal, it became the foundation for colonial higher education—standardised, hierarchical, and easily replicated. Its logic endures in many of today’s global benchmarks.</span>—originally designed to export British credentials across the empire—began to return in a new guise. Newman’s nineteenth-century vision had emphasised moral and intellectual formation through teaching. But what travelled abroad was not Newman’s ideal, but the University of London’s model: a centralised examining body, detached from instruction, and easily reproduced across colonial contexts. In India, for instance, the universities of Calcutta, Bombay, and Madras were founded in 1857 as replicas of this structure. By the late twentieth century, that logic still echoed—no longer imperial in name<span id="ref-15" class="sidenote-number"></span><span class="sidenote collapsible">What passes for internationalisation today often reproduces the colonial hierarchies it claims to transcend. Sabelo J. Ndlovu-Gatsheni—among those who have argued this forcefully—calls for <a href="https://www.thebritishacademy.ac.uk/documents/3266/JBA-9s1-04-NdlovuGatsheni.pdf" target="_blank">a pluriversal approach:</a> one that affirms the coexistence of many epistemologies and reframes excellence as a plural, rather than imperial, pursuit.</span>, but framed as global standard.</p>
+
+  <p>It was into this environment—realigned by standardisation, strategic mimicry, and colonisation by global rankings—that the internet arrived. By the mid-1990s, its presence began to unsettle the university. What had been fixed—lecture halls, timetables, institutional boundaries—was now, newly, and radically, distributable. Courses could be streamed. Campuses could be virtual. Learning might happen anywhere. The idea was not new, but the infrastructure was: digital connectivity invited universities to imagine themselves not as places—not as thinking spaces—but as delivery platforms.</p>
+
+  <p>Some embraced this vision; others resisted. Warnings, in fact, were not new. As early as 1906, sociologist Thorstein Veblen had <a href="https://www.ditext.com/veblen/veb8.html" target="_blank">cautioned</a> against the creeping logic of corporatisation. The intrusion of business principles into universities, he argued, would “weaken and retard the pursuit of learning” by replacing “personal conference, guidance and association between teachers and students” with “mechanically standardized routine.” With the rise of the internet, those concerns reemerged in new form. In the years that followed, universities launched learning management systems, adopted blended learning and opened their resources to the world. MIT’s 2001 <a href=https://ocw.mit.edu/about/ target="new">launch of OpenCourseWare</a> marked a symbolic shift: the beginning of free, global access to elite knowledge—unbundled from enrolment.</p>
+  
+  <p>As higher education institutions turned outward, competing in what had become an unforgiving marketplace, they became, ironically, more alike. They lost their distinctiveness: websites became interchangeable, strategies indistinguishable. The pursuit of metrics, it seemed, had subordinated the mission.</p>
+  
+  <p>This convergence exposed universities in the Global South to a new form of structural marginalisation—“academic capitalism”, as Sheila Slaughter and Gary Rhoades describe it<span id="ref-16" class="sidenote-number"></span><span class="sidenote collapsible">Sheila Slaughter and Gary Rhoades trace how US universities have come to treat knowledge less as a public good and more as a market commodity—developing, packaging, and selling it through expanded ties to private enterprise. Their analysis of this shift, which they call “academic capitalism,” appears in <a href="https://www.press.jhu.edu/books/title/3283/academic-capitalism-and-new-economy" target="_blank"><em>Academic Capitalism and the New Economy</em></a>.</span>—making it “increasingly difficult for those in the global South to contribute to knowledge production.” What emerged was a university significantly shaped by external logics. The “scandalous porousness of boundaries between academia and business,” as Clare Eby <a href="https://www.cambridge.org/core/journals/prospects/article/abs/boundaries-lost-thorstein-veblen-the-higher-learning-in-america-and-the-conspicuous-spouse/32324CBD161765595E244ACAA18A135A" target="_blank">puts it</a>, dissolved the distinctions that had once grounded the university in its ideals—its commitment to autonomy, scholarship, and the public good. In a <a href="https://link.springer.com/article/10.1057/hep.2008.1" target="_blank">global study</a> published in 2008, university leaders—navigating these blurred boundaries and adopting behaviours not unlike those of corporate executives seeking market advantage—were found to be “increasingly responsive” to league tables.</p>
+
+  
+  <p>By now, institutions had expanded into portals, platforms, and dashboards. It was the dawn of what many called an age of abundance—a time when knowledge, in theory, could be accessed anywhere, anytime, by anyone. MIT’s idealistic OpenCourseWare opened the gates, laying the groundwork for MOOCs, which promised access but delivered scale. What followed often looked less like a commons of inquiry than a marketplace of content. Universities—once anchored in deliberation—increasingly mirrored the logic of the platform: modular, measurable, optimised for reach. The transformation was well underway.</p>
+  
+  <p>Then came the pandemic. In 2020, the university’s reliance on place collapsed further. Campuses emptied. What began as emergency remote teaching became a dress rehearsal for the fully digital university. This was not online education by design<span id="ref-17" class="sidenote-number"></span><span class="sidenote collapsible">Charles Hodges and colleagues make a clear distinction between planned online learning experiences and courses offered online in responses to crises. See <a href="https://er.educause.edu/articles/2020/3/the-difference-between-emergency-remote-teaching-and-online-learning" target="_blank"><em>The Difference Between Emergency Remote Teaching and Online Learning</em></a>.</span>, but a stopgap system stretched across the globe. Yet its impact was lasting. Inequalities deepened<span id="ref-18" class="sidenote-number"></span><span class="sidenote collapsible">Multiple studies have shown that the pandemic exacerbated existing inequalities in higher education while also fragmenting attention and learning conditions. Beyond its impact on students, it also affected academics. See Marijke Breuning et al. on the gendered effects of the pandemic on academic productivity: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8239576/" target="_blank">PMC article</a>. For a broader analysis of how Covid-19 digitally fractured learning environments and disrupted the right to education, see Giovanni de Gregorio’s <em>Covid-19: Towards a Digital Fragmentation of the Right to Education</em>: <a href="https://yjil.yale.edu/posts/2021-01-22-covid-19-towards-a-digital-fragmentation-of-the-right-to-education" target="_blank">Yale Journal</a>.</span>. Attention fractured. The infrastructure of higher education bent further toward automation, efficiency, and reach. The university—stretched between ideals and incentives—found itself accelerating a shift that it had begun with the internet: from a “space of places”, in Castellsian terms, to a “space of flows”. Presence no longer required proximity; almost overnight, platforms had displaced place.</p>
+
+ 
+  <p>The university had changed. It had become a structure marked by virtual presence—and physical absence.</p>
+
+
+
+
+  <!-- INTERRUPTION SECTION -->
+<section id="interruption">
+  <div class="section-number">Interruption</div>
+
+  <p><span class="first-word">Chatgpt entered the</span> university quietly—one moment absent, the next, in the front row, hand raised, responding.</p>
+
+  <p>The response of the academy was brisk and familiar: task forces were convened, new guidelines drafted, and detection tools googled. The instinct to police, to protect the academy from a new kind of plagiarism: not stolen phrases, but the probabilistic arrangement of words by machines. “ChatGPT is a plague upon education,” <a href="https://www.insidehighered.com/author/jeremy-weissman?utm_source=chatgpt.com" target="_blank">wrote Jeremy Weissman</a>, “one that threatens our minds more than our bodies.” Others cast it in more tactical terms, as a “weapon of mass deception”<span id="ref-19" class="sidenote-number"></span><span class="sidenote collapsible">See <em>ChatGPT: More than a ‘Weapon of Mass Deception’</em>, which explores ethical challenges and responses from the Human-Centered Artificial Intelligence (HCAI) perspective. <a href="https://arxiv.org/pdf/2304.11215" target="_blank">Read PDF</a>.</span>, capable of eroding academic judgement from within.</p>
+
+  <p>Beneath the surface was a deeper discomfort, one that cut to the core of academic confidence: what if the machine made you irrelevant? I saw this in the unease of colleagues—voiced and unvoiced. And I saw it in myself: my own alacrity to experiment, to understand, to master the machine. It was not just curiosity. It was self-preservation.</p>
+
+  <p>The wave of studies that engulfed the academy traced this observation empirically. In interviews and surveys, researchers documented a shared anxiety, a quiet terror of irrelevance, among academics. “Why can [ChatGPT] do things that used to require me?” asked a leader. There is so much fear, another admitted, for “our language is hacked” and this is “so fundamentally different from anything else”<span id="ref-20" class="sidenote-number"></span><span class="sidenote collapsible">See <em>Waiting for the Revolution: How Higher Education Institutions Initially Responded to ChatGPT</em>, <a href="https://link.springer.com/article/10.1007/s10734-024-01256-4" target="_blank">Springer link</a>.</span>. A respondent warned that generative AI might be seen by university managers as a way to “save money“, forcing educators to hand over the power to influence learning “to ‘tech bros’ who don’t really seem that committed to human values and development”<span id="ref-21" class="sidenote-number"></span><span class="sidenote collapsible">See <em>Generative AI and the Automating of Academia</em>, <a href="https://link.springer.com/article/10.1007/s42438-023-00440-6" target="_blank">Springer link</a>.</span>. Some others, perhaps out of pragmatism or bravado, felt they were safe—for now. “It cannot replace teachers’ input, at least for the moment,” one said, “because AI cannot tell the students in details, and the students need to know the question to ask”<span id="ref-22" class="sidenote-number"></span><span class="sidenote collapsible">See <em>Will Generative AI Replace Teachers in Higher Education? A Study of Teacher and Student Perceptions</em>, <a href="https://link.springer.com/article/10.1007/s42438-023-00440-6" target="_blank">Springer link</a>.</span>.</p>
+
+  <p>Threading through this early panic, almost from the outset, was a countercurrent of educators who argued for absorption. Many swept up in this view subscribed to the unsurprising AI-can’t-be-returned-to-the-bottle thesis. Others, seated on the early rise of Everett Rogers’s diffusion curve, made a spirited case for engagement. Andrew Ng, cofounder of Google Brain and adjunct professor at Stanford, drew a <a href="https://www.gsb.stanford.edu/insights/andrew-ng-why-ai-new-electricity?utm_source=chatgpt.com" target="_blank">now-familiar comparison</a>: just as electricity transformed almost everything a century ago, so too, he suggested, would AI—education included. Ethan Mollick, an early adopter and professor at Wharton, <a href="https://www.oneusefulthing.org/p/the-future-of-education-in-a-world" target="_blank">wrote</a> in <em>One Useful Thing</em> that education may be “uniquely well-placed” to adapt to AI, and in ways that “will improve both learning and the experience of instructors”. Helen Compton, an associate professor of instructional technology, saw it as <a href="https://www.technologyreview.com/2023/04/06/1071059/chatgpt-change-not-destroy-education-openai/?gad_source=1&gclid=Cj0KCQjwzYLABhD4ARIsALySuCTwzx-oKwKrvgml3P_lqJwKGDMvePwVrCGGnuXksopC3V1FLMvTPSEaAjKtEALw_wcB" target="_blank">a long-delayed opening.</a> “We’ve long wanted to transform education,” she said. “We’ve been talking about it for years.”</p>
+
+  <p>Looking back, what stands out is not a singular institutional response, but a scramble of scholarship. A surge of papers emerged, some driven by genuine curiosity, others more calculated, even performative—propelled by what Cris Shore and Susan Wright call the <a href="https://link.springer.com/chapter/10.1007/978-981-15-7598-3_5" target="_blank">'audit culture’</a> of the corporatised university. In education and the humanities, there were calls to rethink assessment, curriculum, pedagogy. In business schools and STEM fields, emphasis fell on detection tools and productivity frameworks; in computing and engineering, on prompt design and technical fluency. Between these poles sat the less vocal majority, working around uncertainty, unsure, even ambivalent. The urgency of early 2023 gave way to more layered engagement by late 2024, raising deeper questions—of equity, labour, epistemic authority. Yet across this spectrum, one tendency held: what was framed as disruption was more often treated as an operational challenge.</p>
+
+  <p>All this unfolded against a backdrop of deepening strain. In the UK, redundancies swept through departments as the sector tightened under fiscal pressure. In the US, universities found themselves in the crosshairs of populist suspicion—accused of bias, irrelevance, or worse—as the anticipated <a href="https://www.brookings.edu/articles/are-colleges-really-facing-an-enrollment-cliff/" target="_blank">enrolment cliff</a> loomed. Globally, institutions grappled with declining student numbers, financial uncertainty, and a shifting political landscape. What AI unsettled within the university, the wider world—still unsteady from the pandemic, and now navigating a novel geopolitical order—is making harder still to face.</p>
+</section>
+
+
+<!-- DESCENT SECTION -->
+<section id="descent">
+  <div class="section-number">Descent</div>
+
+  <p><span class="first-word">Something remarkable happens</span> before we see lightning. Many milliseconds before the flash, the air begins to fracture. Threads of electric charge lance through the sky, unsettling the atmosphere. Electrons shear from atoms. Plasma forms. Then: light—brief, white, and hotter than the surface of the sun. Only afterwards comes the sound: thunder—the air forced outward, a shockwave trailing the light that split it open.</p>
+
+  <p>We might think of AI as lightning. Briefly, it illuminated something we had seen too often to truly notice. Something flickered into view and we saw, or half-saw, a space straining at the seams. We saw the need for remaking. Like lightning, it didn’t last long. But for a moment, we glimpsed the brittle bones of an architecture no longer in alignment.</p>
+
+  <p>To see what we’ve just seen, we’ve moved quickly: through histories, institutional drift, and the ambient unease that now hangs over higher education. We’ve traced the rise of performative learning, the quiet surrender of place to platform, and the disquieting speed with which institutions built to think began moving without adequate thought. And en route we met—briefly—Hypatia, who may yet offer instruction for where we now stand.</p>
+
+ <p>Hypatia taught in Alexandria during a time of religious volatility and political instability. That she taught at all was extraordinary. Women’s education was rare; public intellectual life rarer. She taught with what contemporaries described as extraordinary eloquence and clarity—so much so that, as one account put it, there was “a friendly traffic in intellectual subjects” between Alexandria and the world<span id="ref-23" class="sidenote-number"></span><span class="sidenote collapsible">In <em><a href="https://doi.org/10.1080/10724117.2009.11974823" target="_blank">Who's Hypatia? Whose Hypatia Do You Mean?</em></a>, Hardy Grant notes Hypatia’s students came from across the eastern Mediterranean—from what is now Europe, North Africa, and West Asia. The daughter of mathematician Theon, she studied arts, literature, science, and philosophy under the most respected teachers of her time.</span>. She moved visibly through a plural society, in an open chariot, cloaked, composed—graceful in figure, formidable in thought. A presence so public, so respected, might be expected to protect. But in times of upheaval, it can do the opposite. Hypatia’s public standing—and her closeness to the Roman governor—made her a target. She was dragged from her chariot by an Alexandrian mob, stripped, and killed, her body dismembered with shards of pottery.</p>
+
+  <p>I return to Hypatia not to recover a lost ideal, but to clarify what thinking requires in order to endure. She lived before the university, embodying what it would one day seek to protect: a spirit of openness, plurality, and inquiry grounded in communal meaning<span id="ref-24" class="sidenote-number"></span><span class="sidenote collapsible">Castells argues that communal meaning depends on the “space of places”—institutions rooted in locality, where shared attention, memory, and inquiry can take hold. When these are displaced by the abstracted flows of a networked world, meaning often thins. Hypatia, teaching from her home in Alexandria, created not just knowledge but presence: a site of grounded, plural thought.</span> and directed toward the public good. Her life—and death—remind us that the space for thought is never guaranteed. What falters first, we could say, is not the will to think, but the shelter—spatial and temporal—that thinking needs. In Hypatia’s time, that shelter shredded under the weight of sectarian violence. In ours, it is being dismembered more slowly: by metrics, by mimicry, by the slow hollowing of institutional purpose<span id="ref-25" class="sidenote-number"></span><span class="sidenote collapsible">I use institutional purpose not to suggest a single, unified vision, but to point to the set of roles and responsibilities through which the university once understood—and justified—itself. In Habermasian terms, this reflects a drift away from communicative rationality—where meaning is negotiated through dialogue—toward a logic increasingly shaped by external systems and instrumental demands.</span>. And into this unravelling, steadily underway, AI entered as a final catalyst, forcing us to see, more starkly than before, just how close to the edge we stand.</p>
+
+  <p>It is an edge we sighted more than two decades ago. Behind us, if we care to look back, lies the last great horizon we crossed: the internet. Then, too, we stood on the cusp of possibilities. But the university changed without changing. It adopted new tools, launched new portals, expanded its digital reach. Internally, little shifted. Systems of assessment, structures of authority, assumptions about knowledge in a networked world—who teaches, who learns—all remained intact, simply shovelwared<span id="ref-26" class="sidenote-number"></span><span class="sidenote collapsible">In many universities, the shift online resembled what the software world calls “shovelware”: existing courses uploaded to digital platforms, with little redesign or reflection. The deeper opportunity was missed—to build plural pedagogies, reimagine presence and access, and rethink what learning might look like in a connected, asynchronous, multilingual world. Instead, we scaled what we already had—often the worst of it.</span> from seminar room to screen, rather than reimagined for the affordances of a connected age. ‘Knowledge’ was distributed more widely, but not more wisely.</p>
+
+  <p>We repeat the pattern. Now, as then, there is an eruption of activity across higher education, spurred by market pressures<span id="ref-27" class="sidenote-number"></span><span class="sidenote collapsible">Universities responded to internet technologies primarily when market pressures demanded it, rather than proactively reimagining their educational mission. Today’s AI initiatives follow a similar path—driven by the optics of innovation and the imperatives of global competition. As documented across strategy reports and sector briefings, the emphasis lies on positioning, productivity, and reach—not on rethinking what a university must become in an AI-saturated world.</span>: think tanks, task forces, policies, pilots, partnerships—and supercharged marketing dressed as ‘internationalisation’. We see an entire sector moving within the bounds of inherited logic. Like a Notion subpage constrained by the architecture of its parent, the university adapts with what Castells calls “defensive institutionalism”—absorbing technological change while preserving existing structures and avoiding deeper reimagination. AI, then, is slotted in: old logic, new interface.</p>
+
+  <p>One way to see through this—what we might call the <em>illusion of adaptation</em><span id="ref-28" class="sidenote-number"></span><span class="sidenote collapsible">I borrow from a range of scholarship here. The idea is relatable to Ronald Heifetz’s distinction between adaptive and technical change, and to what institutional theorists call symbolic adoption—ways organisations perform change to maintain legitimacy. It’s close, too, to Nils Brunsson’s notion of organisational hypocrisy. We might also see echoes of Castells’s idea of defensive institutionalism—absorbing change without rethinking the core.</span>—is to consider the field of AI in Education (AIEd). If we zoom out from the individual institutional responses to examine the broader scholarly discourse, we might take the research flooding this swiftly emerging field as a proxy for the kinds of thought the academy legitimises—and, by extension, offers back to the world.</p>
+
+  <p>Most of it, we will see, converges on four familiar frontiers: pedagogical tools (intelligent tutors, chatbots, automated feedback), institutional operations (enrolment, scheduling, resource forecasting), ethical concerns (bias, privacy, access), and staff development (AI literacy, human–machine collaboration). These are important. But they suggest a system still orbiting a narrow centre—one that treats AI as functional add-on, not foundational challenger. Melissa Bond, a research fellow at University College London <a href="https://educationaltechnologyjournal.springeropen.com/articles/10.1186/s41239-023-00436-z"; target="_blank">who led a meta review</a> published in 2024, found the field preoccupied with adaptation and personalisation, yet thin on ethics, theory, and conceptual depth. An <a href="https://rdcu.be/eiDMI"; target="_blank">earlier study</a> by Olaf Zawacki-Richter and colleagues, covering over a decade of research, found much the same: "weak connection to theoretical pedagogical perspectives" and limited engagement with the larger societal role of education. "It is crucial to emphasise," the authors wrote, "that educational technology is not (only) about technology—it is the pedagogical, ethical, social, cultural and economic dimensions of AIEd we should be concerned about."</p>
+
+  <p>This brings us to that important question: what if we continue along this path? Where might it lead us? To answer, we need to return to what I earlier called the illusion of adaptation. This illusion, I suggest, takes three forms, each reflecting a particular way institutions misread the AI challenge.</p>
+
+  <p>First is the <em>illusion of instrumental control</em>: the belief that AI is merely a tool, governable, containable, manageable through retrospective policy. Second, the <em>illusion of additive integration</em>, where technology is seen as simply, unproblematically, augmenting existing practice. Third is the <em>illusion of institutional exceptionalism</em>: the conviction that institutions, by virtue of tradition or past survival, will weather this disruption without having to rethink their foundations.</p>
+
+  <p>The first illusion enacts what I call a <em>colonising logic</em><span id="ref-29" class="sidenote-number"></span><span class="sidenote collapsible">The idea of colonising logic draws from several traditions. Habermas warned of the “colonisation of the lifeworld,” where systems logic overrides social meaning. Langdon Winner described our tendency to sleepwalk through technological adoption, eyes shut to its social consequences. Lucy Suchman extended this, showing how institutions try to master technologies while ignoring the reorganisations they invite. There’s a postcolonial twist, too: as Bhabha observed, colonial power misrecognises the hybrid forms it generates—something institutions today echo as they mistake control for coherence. In Bourdieu’s terms, it is a form of misrecognition: failing to see the transformation unfolding beneath one's feet.</span>. The second illusion, additive integration, surfaces as what we can describe as <em>symbolic innovation</em><span id="ref-30" class="sidenote-number"></span><span class="sidenote collapsible">The term symbolic innovation is adapted here to describe how institutions adopt the language and imagery of change while insulating themselves from its effects. It builds on the idea of “ceremonial adoption” in organisational scholarship. Universities have turned this into something of an art form with AI: innovation centres, big rhetoric, transformation-themed task forces—none of which meaningfully disturb the deeper architecture. It’s a performance of futurity that carefully avoids actual disruption.</span>. And the third, institutional exceptionalism, appears as what can be termed <em>survivor hubris</em><span id="ref-31" class="sidenote-number"></span><span class="sidenote collapsible">Bourdieu's concepts of doxa, habitus and misrecognition illuminate the idea of survivor hubris: how institutions become so accustomed to their own practices that they can no longer see alternatives. What's fascinating is how institutions internalise past adaptation as inherent capacity rather than historical accident. This misrecognition crafts self-congratulatory narratives about resilience that dangerously misread present challenges—like the aging boxer who, having weathered many fights, cannot imagine the punch that will finally knock him down.</span>. Together, these illusions produce a distinctive pattern—<em>adaptive postponement</em><span id="ref-32" class="sidenote-number"></span><span class="sidenote collapsible">Adaptive postponement captures something distinct from outright resistance or enthusiastic embrace. Universities excel at this temporal cleverness: creating just enough change to claim adaptation, while deferring the most difficult questions to some indefinite future. It is institutional procrastination, dressed as strategy.</span>—in which institutions embrace surface-level change while delaying action on its most consequential implications<span id="ref-33" class="sidenote-number"></span><span class="sidenote collapsible">One could ask whether these are truly illusions—or rather partial truths that become problematic when overextended. Institutions can sometimes govern technology, integrate it incrementally, and survive disruption. The danger lies not in these capacities, but in mistaking them for comprehensive adaptation. Each illusion reinforces the others: the belief in governance enables the assumption of augmentation, which in turn fuels confidence in institutional exceptionalism. It’s like knowing how to swim and assuming you’re ready to cross an ocean. The real risk is that these interlocking beliefs are used to justify delay—postponing the deeper work that real adaptation requires.</span>.</p>
+
+  <p>The entanglement I’ve sketched here rarely unfolds one illusion at a time. In practice, they overlap, layered in different proportions, shaped by history, ambition, and institutional position. A legacy redbrick university might implement AI governance frameworks (colonising logic), establish a ‘Centre for AI and Human Futures’ to capture prestige and funding (symbolic innovation), and quietly trust that past resilience will see it through (survivor hubris). Further down the ladder, a mid-tier institution—keen to climb the rankings and court international students—might fast-track new degrees in ‘AI and Ethics’ (symbolic innovation) and automate recruitment to appear lean and responsive (instrumental control). At a community college, we might see a simpler move: how-to-use-AI courses alongside existing programmes (additive integration). Across all three, we see the pattern of adaptive postponement: the instinct to manage the moment while deferring deeper reckoning.</p>
+
+  <p>In the short term, the trend is unlikely to slow. We will see more: more dashboards, more microcredentials, more new degrees, more aspirational centres, more banners of transformation. More policies written, pilots launched, research kickstarted. But beyond these operational responses—beyond the metrics and the marketing—what begins to emerge, if we follow the patterns visible, is a set of longer-range trajectories, felt unevenly across the world—some still unfolding, others gathering force.</p>
+
+  <p>We will see growing financial strain. It is already being felt, and will deepen as institutions lock themselves further into the finite game, chasing rank, reach, and shrinking revenue. In the US, enrolment has fallen sharply over the past decade; in the UK, departments are closing as public funding stagnates. The economic model—long reliant on prestige, exclusivity, and a now-eroding sense of physical presence—will become harder to sustain.</p>
+
+  <p>We will see deepening stratification. The most resourced universities will consolidate their role as providers of premium, human-led education. Others will survive on cuts, mergers, and short-term fixes—sustained by symbolic innovation, rhetoric, and receding markets—until they can’t. What happened to journalism under the internet may now unfold in education: a handful of global brands endure, while many mid-tier providers struggle to justify their role. Kerr’s concept of a multiversity—once defined by its overlapping missions—threatens to condense into an oligopoly: a few elite nodes, and a long tail of institutions hollowed by precarity.</p>
+
+  <p>We will see the erosion of educational substance. As financial pressure mounts, institutions will turn to automation to manage cost and demand. AI-enabled systems will be deployed across a growing share of pedagogical functions: content generation, assessment, feedback, elements of instruction. What results may appear efficient. But the kinds of learning that resist automation—dialogue, doubt, collective sense-making—will be pushed to the margins.</p>
+
+  <p>We will see the weakening of academic authority. The university’s role as gatekeeper—setting standards, validating expertise, conferring legitimacy—will be increasingly bypassed. A growing ecosystem of nimble, skills-focused challenger academies<span id="ref-34" class="sidenote-number"></span><span class="sidenote collapsible">Examples include Coursera, Udacity, and OpenAI’s learning platforms, alongside corporate credentialing from Google, Microsoft, and Amazon. Many offer modular, industry-aligned courses designed for scale and rapid uptake. As these alternatives grow more sophisticated—faster to update, cheaper to deliver, and increasingly recognised by employers—they will capture an expanding share of the learner market once served by traditional universities.</span>—already absorbing a share of higher education demand—will extend their reach. The authority to define knowledge will diffuse further, and with it, the university’s central claim to epistemic legitimacy.</p>
+  <p>We will see deepening technological dependence. What begins as a drive for efficiency—automating feedback, streamlining assessment, managing attention—will escalate. Universities will reorganise around the logic of their tools; pedagogical judgement will yield to platform design. With it will come a subtler techno-dependent reshaping: how students learn, how time is spent, how depth is displaced by delivery. And the harms experienced today—diminished attention, cognitive fatigue, social disconnection—will multiply.</p>
+<p>
+  There is yet another outcome we might not wish to ignore: obsolescence. Complex systems—of which higher education, increasingly organised around technological infrastructures, is one—rarely fracture with warning. Collapse often comes without crisis. Complexity scholars note: when a threshold is crossed, when an exogenous shock exposes hidden fragilities or quietly erodes resilience, the system tips—no longer able to absorb the strain it once held with ease.<span id="ref-35" class="sidenote-number"></span><span class="sidenote collapsible">Complexity science, which studies how multidimensional systems adapt, self-organise, and sometimes fail, offers a lens for understanding collapse not as a single event, but as a phase shift. Scholars such as Joseph Tainter (<em>The Collapse of Complex Societies</em>) and Thomas Homer-Dixon (<em>The Upside of Down</em>) have shown how structures under sustained stress may appear stable—until they don’t. When resilience, gradually eroded, gives way, tipping points emerge: feedback loops tighten, magnifying strain; redundancy thins, leaving no slack to absorb shock. What once buffered disruption begins instead to amplify it, triggering failures that ripple across the system beyond control.</span> There is no signal. Only the spectacle.
+</p>
+</section>
+
+
+
+<section id="remaking">
+  <div class="section-number">Remaking</div>
+
+  <div class="subsection">
+     <p><span class="first-word">Perhaps it won’t</span> come to that. But if post-AI Armageddon is not our fate, then responsibility returns. We are free to build a future in which the university thrives. What might that look like? And what must we begin—now—while the window still holds?</p>
+     
+      <p>We begin, perhaps, by looking outside our four walls. To imagine a new future, we must look at the world in which that future would exist. But we rarely do—carefully. Too often, we picture the future in present tense: through tools of now, not of then. I doubt anyone would disagree that today's AI, for all its 'magic', remains rudimentary. Built on brute compute and trained on vast datasets, it lacks the lucidity of Zinsser, the lightness of Calvino, the symphony of Bach. And yet, with systems still crude, it is even now producing what appears miraculous: <a href="https://www.nature.com/articles/s41586-019-1799-6" target="_blank">predicting diseases</a> with superhuman accuracy, <a href="https://www.wired.com/story/synchron-amazon-alexa-brain-computer-interface-bci/?utm_source=chatgpt.com" target="_blank">commanding machines with thoughts</a> alone, and solving in minutes what once took a <a href="https://www.nature.com/articles/s41586-019-1666-5" target="_blank">supercomputer some 10,000 years</a>.
+
+        <p>What happens when this strength is refined? When force is finessed and 'intelligence' becomes more powerful? As Claude CEO Dario Amodei writes in <a href="https://www.darioamodei.com/essay/machines-of-loving-grace" target="_blank" style="font-style: italic;">Machines of Amazing Grace</a>: "Most people underestimate just how radical the upside of AI could be, just as they underestimate how bad the risks might become." His warning on the elusive challenge of <a href="https://www.darioamodei.com/post/the-urgency-of-interpretability" target="_blank">interpretability</a>—our limited grasp of the “inner workings of AI systems” and how “vast matrices of billions of numbers” arrive at decisions—underlines the risks of “growing” machines we do not understand. 
+  <p>
+  The upside, as its architects describe it, is a rich world. OpenAI CEO Sam Altman imagines a future where AI doubles the world’s GDP,<span id="ref-36" class="sidenote-number"></span><span class="sidenote collapsible">Visions of AI-driven abundance often overlook a critical question: how will gains be shared?
+    As Anton Korinek and Joseph E Stiglitz <a href="https://www.nber.org/system/files/working_papers/w28453/w28453.pdf" target="_blank">write</a>,
+    new technologies typically give rise to a "winner-takes-all dynamics" that advantage developed countries. One way to counter this, as Saffron Huant and Sam Manning argue in
+    <a href="https://www.noemamag.com/heres-how-to-share-ais-future-wealth/" target="_blank"><em>Here's How To Share AI’s Future Wealth</em></a>,
+    is to build in mechanisms of <em>predistribution</em> in AI systems and governance from the outset.</span> where work becomes optional; DeepMind’s Demis Hassabis predicts one where drug development, which once took years and billions, could be compressed in both time and cost; and Netscape co-founder Marc Andreessen imagines a future where “everything we care about will be better”. We hear of a future where nations wield “sovereign AI”, where we command “a country of geniuses in a data centre”, where “the impossible becomes possible”.
+</p>
+<p>On the other side of the prediction page, imprinted in the margins, we read of systems slipping their leash: tools “too powerful for any one company to control”; models “trained on the whole internet, but owned by a few”; and future faculties operating at “inhuman speeds”, rendering traditional regulations “useless”—raising a singular “question of human survival”. We hear warnings from scholars who’ve spent years at the fault lines of technology and society: Virginia Dignum, Shannon Vallor, and Ruha Benjamin, among others. And we hear their calls—for anticipatory governance<span id="ref-37" class="sidenote-number"></span><span class="sidenote collapsible">Virginia Dignum argues AI cannot be governed retroactively. She calls for <a href="https://youtu.be/qp8t-6GOGZw?si=h5OSMRNFQglZKjYU" target="_blank">anticipatory governance</a>—a forward-looking, participatory model that embeds ethics and accountability from the outset. See <a href="https://link.springer.com/book/10.1007/978-3-030-30371-6?trk=public_post_comment-text" target="_blank"><em>Responsible Artificial Intelligence</em></a>; and her co-authored paper <a href="https://link.springer.com/article/10.1007/s11948-018-0031-0" target="_blank"><em>AI4People—An Ethical Framework for a Good AI Society</em></a>.</span>, technomoral virtue<span id="ref-38" class="sidenote-number"></span><span class="sidenote collapsible">In <a href="https://www.google.co.uk/books/edition/Technology_and_the_Virtues/RaCkDAAAQBAJ?hl=en&gbpv=1&dq=info:-KkUvBqlJosJ:scholar.google.com&pg=PP1&printsec=frontcover" target="_blank"><em>Technology and the Virtues</em></a>, Shannon Vallor explores how humanity may have a good life—an ethical life—in the company of technology. Vallor interestingly points to the example of how female chimpanzees stop fights by technological disarmament—confiscating stones from the aggressor’s hands—to make the point that our lives have always been entwined with technology. Today, this is even more so. “Thus,” she writes, “21st century decisions about how to live well—that is, about <em>ethics</em>—are not simply moral choices. They are <em>technomoral</em> choices, for they depend on the evolving affordances of the technological systems that we rely upon to support and mediate our lives in ways and degrees never before witnessed.”</span>, and a socially conscious approach to technology<span id="ref-39" class="sidenote-number"></span><span class="sidenote collapsible">In various works, including <a href="https://www.youtube.com/watch?v=bSK2ygnuXxE" target="_blank"><em>Race After Technology: The New Jim Code</em></a>, Ruha Benjamin explores how technology and <a href="https://www.princeton.edu/news/2020/05/15/benjamins-race-after-technology-speaks-growing-concern-among-many-tech-bias" target="_blank">discriminatory design</a> deepen inequalities. She shows how <a href="https://www.science.org/doi/10.1126/science.aaz3873" target="_blank">coded inequities</a> mask bias beneath innovation and normalize discrimination. This injustice, she argues, is “perpetuated precisely because those who design and adopt such tools are not thinking carefully about systemic racism.” Benjamin calls for a more socially conscious approach to developing technology, grounded in social justice.</span>—blur in the glow of code and circuitry, eclipsed by youthful zeal and the rush of innovation.</p>
+
+    <p>Predicting which of these futures will unfold—and to what extent—is an exercise in uncertainty. But it is reasonable to believe that many fundamental shifts will occur. Machines will reach deeper into our minds: extending memory, steering choices, assisting creativity. Scientific discovery and political decision-making will accelerate faster than the systems designed to support them. We will live inside a more networked world, flooded by informational abundance but starved of attention. The systems we build will not just be faster or larger; they will weave the world into denser, more fragile interdependencies. Simulations will bleed into our realities. In a world of increasing interfaces and indistinguishable avatars, machines will script more of our choices, shape more of our memories, and blur more of the thresholds between experience and fabrication. Even if only a fraction of these changes materialise, we will find ourselves living in a radically reframed world.</p>
+  </div>
+</section>
+
+
+<div class="subsection">
+  <p><br></p>
+  <p><span class="first-word">It</span>  is in this altered world that the university must now exist. For much of its history, it operated with what might be called a twin-world mentality: as if it were a separate world, a sanctuary for knowledge creation protected from turbulence, though situated within the larger world. It cultivated this separation through its own world-making practices: physical spaces shielded from external incursions; specialised languages and rituals; exclusive control of credentials; distinct temporal rhythms—academic calendars, tenure clocks—aligned to intellectual cycles rather than market demands. These structures, though fragile, still persist. But the twin world fallacy—this long-sustained illusion of institutional exceptionalism—is unlikely to survive the radical future now unfolding. A more productive way forward, I suggest, is to conceive the university not as a situated twin world<span id="ref-40" class="sidenote-number"></span><span class="sidenote collapsible">I sketch the barest of outlines here. A fuller reckoning would need to account for the broad diffusion of knowledge production and validation beyond the university: the rise of private research-producing entities like DeepMind, OpenAI, and Anthropic; the growth of alternative educational models, from MOOCs and coding bootcamps to industry-issued credentials; the erosion of traditional gatekeeping across platforms, open repositories, and informal networks. Each of these trends is uneven, incomplete, and tangled with the very structures they challenge. I have not traced these nuances here, nor have I yet fully unfolded the complexities of permeability, boundary maintenance, and institutional discernment that such a shift demands. I mark only, in passing, the ground shifting beneath our feet.</span>, but as a sub-world: embedded within the larger knowledge world, increasingly permeable to external forces, necessarily adaptive, yet capable of sustaining a distinct internal purpose within the systems that now engulf it.</p>
+
+  <p>We imagined, a moment ago, glimpses of our radically reframed world: accelerated cognition, simulated realities, shifting temporalities. Together, these are part of a deeper shift: a transformation of the very conditions under which knowledge—and indeed what counts as knowledge—is created and valued. The university’s historical monopoly over the architecture of knowledge has already begun to erode. Research, interpretation, and even theorisation now emerge from far beyond the traditional academy, generated by knowledge creators who operate according to logics and tempos the university did not design and cannot fully govern.</p>
+
+  <p>This brings us to a deeper question: if the university can no longer claim to be the preeminent architect of knowledge, if its authority now cannot be assumed, what reason might it still have to exist? And if it does endure, what purpose might it yet serve in the world now forming?</p>
+
+  <p>Earlier in this essay, we traced the idea of the university as a place for thought. It championed the belief that knowledge—and thinking—mattered, not merely for its utilitarian outputs, but for what it made humanly possible. We saw this thought flicker across the Alexandrian halls, where inquiry across traditions was preserved and extended; in Humboldt’s vision of Bildung, where self-formation unfolded through independent, serious inquiry; and in Newman’s defence of liberal education, where the mind was cultivated not for mere utility, but for its unfolding. This vision was always idealistic; even at its strongest, it was more aspiration than reality, and we have seen how the pressures of metrics and markets have rendered it still more precarious. Yet, it protected something critical: a deliberate space where the slow, difficult, formative process of thinking might unfold. Does the altered world require such a space? Does this purpose still hold?</p>
+
+  <p>It would be easy to think such a space no longer matters in our augmented future. Even now, thought surfaces—and travels—faster than ever before, shaped less by deliberation than by the velocity of networks and machines. Learning has become lighter, quicker. We are promised a richer world, a better world, where much of what once required human minds will soon not. In such an environment, the cultivation of a thoughtful mind—the slow labour of human thinking—can seem expendable.</p>
+
+  <p>To my slow and ponderous human mind, this is why the university must endure. In a world of synthetic abundance, the need for deep thinking becomes more demanding, not less. Without it, I suggest, we risk creeping thoughtlessness. One form of this is familiar: the corrosion of our attention, our growing impatience for complexity, our drift toward curated certainties. The other is newer, stranger: the machines that ‘think’ without pause, simulate understanding—even empathy—and mirror human judgement without its burdens. Both, I think, thin thought into mere reflex. The university, if it is to matter in the altered world, must not merely shelter thinking, but keep open the space where new thinking—new forms of thinking—might emerge.</p>
+
+  <p>I lack the foresight to predict what such thinking might require. But we can be fairly certain that it will need to extend beyond the standard responses currently offered: critical thinking and cross-disciplinary approaches. I don’t mean to dismiss the value of either. Both matter. But neither, I suggest, meet the demands of an altered world. Machines already perform an ‘instrumental’ version<span id="ref-41" class="sidenote-number"></span><span class="sidenote collapsible">This version of critical thinking—what we could call ‘instrumental critical thinking’—involves deconstructing complex cognition into individual components such as analysis, inference, and evaluation. These lend themselves well to probabilistic pattern-matching. What machines still lack are the more demanding forms of judgement: the capacity to situate knowledge in context, to reflect on the act of thinking itself, and to consider why it matters.</span> of critical thinking with increasing fluency, stripping it down to individual components and matching them, probabilistically, to familiar patterns. Similarly, systems surface and model cross-disciplinary connections at a speed and scale beyond what human minds can follow. As we move into the future, our thinking, entangled with machines, will entangle still more messily. When humans and machines co-produce knowledge, at high velocity, would we be able to discern where one ‘thought’ begins and interlaces? More critically, will it matter? What the emerging world calls for, I tentatively offer, is a more integrative thinking: one that can hold together different minds and tempos, without relinquishing the capacity to reflect, to choose, and to mean.</p>
+
+  <p>I don’t mean to overstate what thinking can do. Nor do I imagine the university holds any monopoly on it. Thinking alone cannot resolve the complexities of our altered world. But without it, no solution can emerge. Deep thinking flourishes outside the university too: in artistic communities, religious traditions, indigenous knowledge systems, and, today, even in corporate institutions. And yet, for centuries, the university has served as a site for sustained inquiry. Its physical, social, and temporal structures were shaped, however imperfectly, to support the labour of thought.</p>
+
+  <p>What the university might now offer, then, is not a rewired ideal, but a deeper commitment to the one it has long embodied: sustaining environments where thinking can unfold with depth, friction, and care. What demands change now, I suggest, is the nature of inquiry itself. From the cultivation of the individual mind, as Newman once envisaged, we may need to shift toward collaborative inquiry—a cultivation of the collective mind<span id="ref-42" class="sidenote-number"></span><span class="sidenote collapsible">There are efforts that echo this orientation. The Collective Intelligence Project, for instance, explores how 
+    the processes and institutions that drive effective decision-making around transformative technology might be reimagined to address collective priorities. See <a href="https://www.cip.org/whitepaper" target="_blank">their thoughts.</a></span>. Could we imagine the university not primarily as a credentialing system or even a producer of knowledge, but as a kind of ecological shelter—where different ways of knowing might converse, where new topographies of thought<span id="ref-43" class="sidenote-number"></span><span class="sidenote collapsible">This idea draws on Gaston Bachelard’s <em>Poetics of Space</em>, where he reflects on how corners, rooms, and enclosed spaces shape the textures of imagination. While Bachelard wrote of solitary reverie, later scholars have extended his ideas to collective and institutional settings—arguing that thought is always shaped by the places it inhabits: spatial, affective, historically layered. I also borrow from Edward Casey’s defence of physical place against the abstract geometries of modern space. Both thinkers urge a return to place to dwell more deliberately in the environments that sustain reflection.</span> might emerge, and where the textures of place invite the slower, deeper work of reflection?</p>
+</div>
+
+
+
+<div class="subsection">
+  <p><br></p>
+  <p><span class="first-word">To</span> arrive at our imagined future, idealistic as it may be, there is the matter of living the present—well. The perils of our current trajectory have been sketched: escalating financial pressures, deepening stratification, the quiet erosion of thought, and the looming threat of obsolescence. So too the three illusions that mask this decline: that technology is tameable (illusion of control), that integration need not mean transformation (illusion of additive integration), that the university remains exceptional by default (illusion of exceptionalism). The question, as before, is where we might begin: what needs to change now, in the present and the near future?</p>
+
+  <p>Part of what propels our trajectory is the changing character of knowledge—what counts, what is rewarded, what is seen to matter. Much of it is shaped by the demands of now: present markets, institutional metrics, and short-term signals. But the question we might not be asking enough is what knowledge will look like in the altered world: what will be worth knowing then, and what it will ask of us.</p>
+
+  <p>We should perhaps begin with something quite fundamental: our attention. Where we invest our finite capacity for it—in a world of informational overabundance—will be critical. That capacity, I accept, may itself be augmented. But even so, how might we learn to decide what to attend to? Discernment, in this context, becomes more than a cognitive skill, and more than filtering and fact-checking. It becomes an art: knowing what to notice, how much, and when; what to set aside; and when to change our minds. What kinds of spaces, rhythms, and practices might make room for this more intentional work of choosing, questioning, and caring wisely? As we begin to seek answers, one principle we might hold close is this: <em>in a world of infinite information, what matters most is discernment.</em><span id="ref-44" class="sidenote-number"></span><span class="sidenote collapsible">We might connect this with Michel Foucault’s idea of critique as the art of not being governed quite so much—a practice that goes beyond fault-finding to question the regimes of knowledge themselves. In higher education, critical thinking is often reduced to problem-solving and analysis applied to facts or methods. But might true critique—as Foucault frames it, and Judith Butler defends in her essay <em>What is Critique?</em>—require questioning the very frameworks that shape thought—including those embedded in education itself? In this sense, discernment in the altered world—the capacity to navigate uncertainty, to choose wisely, to resist what seems self-evident—belongs to a longer tradition of critique: one that opens space to reflect on how knowledge is shaped, structured, and authorised.</span></p>
+
+  <p>Once we have chosen what to attend to, a second challenge follows: what do we do with what we know? Knowledge has never existed for its own sake. Even at its most abstract, one could say, it has served something larger: the shaping of minds, the widening of perspective, the cultivation of judgement. That idea acquires fresh urgency in the generative age. Machines will ‘know’ more than we do. They already do. What still matters, then, is what that knowledge makes possible: intellectually, morally, practically. Not what we hold within ourselves, but what we may unlock. We might phrase this as a second principle: <em>the value of knowledge lies in what it makes possible.</em></p>
+
+  <p>Running through both these thoughts—perhaps quietly entwining—is the thread of wisdom. It's what allows us to discern well, to apply what we know with care, towards some greater good. We recognise its distinction from knowledge: knowledge is information-based, the rash younger brother; if he's lucky, someday, he gets to grow up into wisdom. Machines are getting better at knowledge. In time, we can expect them to simulate <a href="https://www.cambridge.org/core/journals/international-psychogeriatrics/article/beyond-artificial-intelligence-exploring-artificial-wisdom/AEFF76E8D643E2B7210995E3ABDAA722"; target="_blank">artificial wisdom</a> too—the capacity to apply knowledge contextually, 'morally' with instrumental logic. But the deeper work—the weighing of values, consequences, meaning—is likely to remain a human task. As our technical powers grow, so too does the space between what we can do and what we should. Somewhere in that widening gap, we will need to remember what must guide us: <em>wisdom must lead</em>.</p>
+
+
+  <p>We’ve sketched discernment, possibility, and wisdom as foundations. But to arrive at the future, we must also confront what the world demands now. The performative<span id="ref-45" class="sidenote-number"></span><span class="sidenote collapsible">We might tentatively connect this performative turn to Judith Butler’s account of gender as constituted through repeated acts, rather than any fixed essence. The analogy is imperfect—Butler’s work destabilises the very idea of a pre-existing “is.” Still, in higher education, legitimacy might also be seen to emerge through iterative repetition: of metrics, citations, dashboards, outputs. What counts, in both cases, is not simply what exists, but what becomes legible through repetition—performed until it appears natural.</span> turn in education—which we traced in the rise of metrics, managerialism, and technological bandwagoning—signals a deeper shift in how trust is earned. Legitimacy leans heavily on visibility now. And the university strains under that pressure. As AI systems flood the landscape with knowledge-like artefacts, the burden of proof will only intensify. When anyone—or anything—can sound authoritative, credibility attaches to what can be demonstrated. How, then, might the university traverse such a world? A fourth principle we may need to work with, I suggest, is this: <em>in an altered world, what cannot be shown will not be believed.</em></p>
+
+  <p>We might also be wise to consider another trait of the changing world: its intolerance for uncertainty. The university has not resisted this well. The grey space for confusion and contradiction, as we have seen, has been overwritten by a preference for black-and-white certainties. But our world is uncertain. It asks us to act amidst ambivalence. It demands we make our way through the unknown—with care, and without paralysis. Yet the capacity to navigate the less certain and the uncertain is one we cultivate far less than we should. A principle we might build towards, then, might be phrased thus: <em>education must build the courage to act in uncertainty.</em></p>
+
+  <p>Would that be enough? Perhaps not. Such courage, if it is to last, must be matched by the ability to work through failures—the capacity to persist. My own observation, drawn from more than two decades within the crumbling walls of the academy, is that this is another area we have paid far too little attention to. Resilience is often spoken of in abstraction; today, it has become a buzzword. But what it actually requires—beyond the now and the narrow—is seldom engaged with seriously: neither in how we work with learners, nor in how we prepare institutions to weather the future. So I offer, with firmer conviction than before, a sixth principle: <em>resilience is a capacity worth investing in.</em></p>
+
+  <p>This returns us, once again, to the question of the institution in the altered world. What might it become? The principles we’ve traced reflect the kinds of knowing that may matter then, and the demands we must meet now, if those capacities are to take root. That, in turn, raises a further question: what sorts of environments might support such growth? Earlier, we suggested the university might need to rethink its twin-world logic, and instead live as a sub-world: situated, permeable, responsive. We imagined, too, a move toward more integrated modes of inquiry: the cultivation of a communal mind. And we noted, briefly, the hold of the three illusions—and the pattern of adaptive postponement, in which institutions embrace surface change while deferring its deeper implications. Together, these threads outline a different kind of institutional environment. One that resists symbolic adjustment, and learns to metabolise deeper change. We might offer that as a seventh principle: <em>the university must become a living system.</em></p>
+
+  <p>To live in this way—to be shaped, and to help shape what matters—requires another shift. The university’s standing, once rooted in its role as a singular site of knowledge and the gatekeeper of credentials, has eroded. In a world more networked, more relational, and increasingly shaped by shared inquiry, authority can no longer be assumed. It must be sustained through relationships—through mutual trust and shared work over time. So I offer a final principle, not as a claim but as a commitment we might choose to follow: <em>legitimacy must be co-created.</em></p>
+
+  <div class="subsection">
+    <p><br></p>
+    <p><span class="first-word">And</span> so, we come to the altered future.</p>
+  
+    <p>The trouble with imagining the future is that we will never quite know if we’re right. We never get to see it in one piece. It arrives in fragments, in faint contortions of the present, in moments that seem out of place. We rarely notice it in time.</p>
+  
+    <p>But the point of looking ahead is not to be right, though that would be rewarding. We imagine the future to see what else might be possible, to begin a new present, to kindle, however lightly, the sense that things need not stay as they are.</p>
+  
+    <p>So far, we’ve traced a long arc, through history and into the present. We’ve looked at the forces that shaped the university, and the conditions it now inhabits. We’ve considered its patterns of response—some adaptive, others evasive. Along the way, we’ve built a scaffolding around a set of ideas, and a cluster of principles drawn from what we can see and what might still be possible. These point to a different way of organising knowledge, and a different way of serving the people who depend on it. There are others, no doubt<span id="ref-46" class="sidenote-number"></span><span class="sidenote collapsible">Speaking of the many catastrophes facing our world, philosopher and cultural theorist Slavoj Žižek <a href="https://youtu.be/1LtAHUtW8sk?si=jTtixXsudjC6xRVl target="_blank">suggests</a> we now live in a “state of superposition”. He uses the quantum mechanics concept—where several states of being can co-exist in parallel—to argue that our trajectory, seemingly a straight line to the future, is in fact a field of possibilities. Multiple possibilities co-exist, and multiple futures might overlap. But we can “retro-actively rewrite our destiny itself”. Pseudo optimism, in his view, is dangerous—and it is no longer enough to be a pragmatic realist.</span>. These are simply one way to begin.</p>
+  
+    <p>What I’d like to attempt now is a few sketches. We can think of them as design spaces: conceptual terrains for experimentation, where different forms of the university might evolve. I think of them as orientations, broad brushstrokes. Each carries tensions of its own, but taken together, they widen the field of what might be imagined. In that spirit, I offer four that may matter.</p>
+  </div>
+  
+  <div class="subsection">
+    <h3 class="sketch-title">The Developmental University</h3>
+  
+    <p>This university’s starting point is not what learners should know, but who they might become. Knowledge, in this institution, is not content. It is context. It works to shape discernment, resilience, and the capacity to act wisely amidst complexity.</p>
+  
+    <p>The Developmental University, thus, emphasises formation—the cultivation of the communal mind. In a world where machines increasingly mediate thought, it works to strengthen what is harder to replicate: the ability to ask well-formed questions, to tolerate ambiguity, to make ethical decisions under pressure. The core idea is to develop the capacities that will allow learners to navigate—and thrive—in the altered world.</p>
+  
+    <p>Learners (and educators) here are prepared for tensions, to educate and re-educate themselves. The purpose is to help shape graduates who can move between systems without losing orientation; who can reflect and act; who can change and adapt meaningfully; and who can realise the possibilities that knowledge enables.</p>
+  
+    <p>In this university, technology is not the subject, nor the adversary. It is the terrain. It focuses on engaging technology with care—preparing learners to live well within an evolving environment, to shape it, and to be shaped by it responsibly.</p>
+  
+    <p>This is a university that focuses on the holistic development of human capacity amidst synthetic intelligence. It adopts a tempered<span id="ref-47" class="sidenote-number"></span><span class="sidenote collapsible">Posthumanist thinkers challenge the primacy of the human in knowledge, ethics, and agency—proposing more entangled models of thought and responsibility. This university adopts that view in principle, while continuing to invest in certain capacities that remain essential within those entanglements—more so because those are needed in the complex, altered world.</span>, posthumanist stance, accepting that agency and intelligence now extend beyond the human, even as it continues to cultivate discernment, care, and ethical orientation as vital capacities in shared worlds.</p>
+  </div>
+  
+  <div class="subsection">
+    <p class="sketch-title">The Problem-Driven University</p>
+  
+    <p>This space focuses on problems worth solving: global, national, local. Its organising logic begins with the world—as it is, and as it might yet be changed. The curricula reshape as new challenges emerge, never staying fixed for long. Knowledge is not compartmentalised, but assembled, repurposed, and reconfigured in response to what demands attention.</p>
+
+    <p>
+
+      <p>
+        The Problem-Driven University, then, rethinks what counts as knowledge, and how it is brought into relation. It embraces the sub-world identity wholeheartedly, dissolving the silo of—and sub-silos within—academic life, gathering learning around shared questions: climate adaptation, algorithmic justice, public health, displacement<span id="ref-48" class="sidenote-number"></span><span class="sidenote collapsible">In <em><a href="https://www.jstor.org/stable/488273" target="_blank">The Idea of the University: Learning Processes</a></em>, Habermas writes of how universities have fragmented through “functional differentiation”—the rise of specialised disciplines detached from a single unifying idea. This undermines their capacity to engage critically with the wider world. The Problem-Driven University can be taken as a quiet response: resisting silos by organising knowledge around shared concerns.</span>.
+      </p>
+      
+
+  
+    <p>It invites multiple ways of knowing—scientific, artistic, indigenous, technical—and aligns them for problem-solving. Expertise here is fluid, often emergent, assembled across disciplines, institutions, and communities.</p>
+  
+    <p>Learners and educators are trained to be comfortable with complexity and act within it. They work together, across differences, in ambiguity. Their goal is to build usable insights, make thoughtful interventions. They learn to act without guarantees, sustain considered action, and to persist when outcomes remain unclear.</p>
+  
+    <p>Technology, here, is embedded in the problem space. It is studied both as challenge and resource—part of what needs to be understood, and part of how responses are shaped. We might think of this university as part workshop, part observatory. What counts as legitimate knowledge is determined through collaborative judgement. We could say, then, that this institution is organised around challenges, rather than disciplines, with knowledge structures that reconfigure based on emerging problems.</p>
+  
+    <p>There are tensions here, of course. A university that focuses on problems may be drawn to the urgent over the important, the visible over the systemic. It may become reactive, or too tightly coupled to the cycles of policy and funding, drawn too often to what is measurable or fundable, rather than what is meaningful but slow. And there’s the fundamental question: who defines the problems, and on what terms? How might different approaches—and different problems—sustain coherence across cohorts, across contexts?</p>
+  
+    <p>Perhaps its legitimacy would need to rest on inclusive processes of problem definition—ones that bring together communities, cross-sector collaborators, and diverse knowledge traditions. Among other things, it might rely on shared repositories of insight—not conventional archives, but living knowledge commons that cuts across disciplines—to scaffold continuity. And coherence, where it matters, may not arise from fixed structures, but from how the work is done: through shared methods, accountable processes, and an ethic of thoughtful response. Success would take many forms. It might be seen in how problems are reframed, in capacities built, in relationships sustained, and in quiet changes over time.</p>
+  </div>
+  
+  <div class="subsection">
+    <p class="sketch-title">The Distributed University</p>
+ 
+
+    <p>
+      This institution is imagined as a constellation, composed of nodes dispersed across geographies, connected more by ethos than by architecture. Many of these are physical—campuses, studios, community labs, embedded in local life. Others are digital, mobile, or transient. What holds them together is not a centre, or hierarchy, but shared purpose, interoperable tools, and a culture of exchange.
+    </p>
+  
+    <p>
+      Each node is shaped by the needs of its local context. One might be a disaster mitigation network in Kathmandu, another a forest learning centre in Chiang Rai, yet another a community college in Cape Town. But these are not tentacles of a central institution, nor franchises replicating a single syllabus. They are knowledge sites in their own right, held together by mutual recognition, common inquiries, and accountability designed for difference. Some nodes may resemble other types I outline in this section, taking the shape of a Problem-Driven or Developmental University—or an Enduring University. We see Castells’s networked society at work here, but perhaps more vividly, Ivan Illich's <a href="https://monoskop.org/images/1/17/Illich_Ivan_Deschooling_Society.pdf" target="_blank">web of learning:</a> decentralised, reciprocal, and shaped by communities who choose to learn together.
+    </p>
+  
+    <p>
+      Where does technology sit in this constellation? It is not simply a tool, or even a terrain. It is the connective tissue. It supports interoperability of the nodes, enabling shared repositories of knowledge, and helping cultivate distributed forms of visibility and recognition. It is used with care—to extend and connect, rather than centralise.
+    </p>
+  
+    <p>
+      Such a university is porous by design. It seeks to embed learning within multiple contexts, each with its own histories, constraints, and ways of knowing. It opens higher education to new publics—those who may never attend a traditional campus, but who are nonetheless engaged in the work of understanding and changing their world.
+    </p>
+  
+    <p>
+      This is not a tidy institution. Without a centre, it may struggle to sustain a common voice. Disparities in resource and recognition can silently harden into hierarchies. And not all forms of decentralisation are democratic. The challenge is to coordinate across difference, and to do so with context—wisely.
+    </p>
+  
+    <p>
+      Still, the possibility is worth imagining. Could coherence emerge not from control, but from shared attention and intelligent collaboration? What if legitimacy emerged from how institutions showed up in their communities, and stayed accountable to them? That small-scale versions<span id="ref-49" class="sidenote-number"></span><span class="sidenote collapsible">While no university currently operates entirely on this model, there are small-scale precedents that suggest its feasibility. Initiatives like the <a href="https://clalliance.org" target="_blank">Connected Learning Alliance</a>, the <a href="https://learn.ecovillage.org/" target="_blank">Global Ecovillage Network’s education hubs</a>, and the <a href="https://arctic-council.org/about/task-forces-saps-and-egs/sustainable-development-working-group-sdwg/interdisciplinary-research-network/" target="_blank">Interdisciplinary Research Network of the Arctic Council</a> all experiment with decentralised, values-based, and community-rooted learning. Though varied in scope and intent, they demonstrate how institutional coherence can emerge from shared commitments rather than structural uniformity.</span> of this already exist—from interlinked teaching collectives to global research networks—suggests such an institution is not merely theoretical.
+    </p>
+  </div>
+  
+
+  <div class="subsection">
+    <h3 class="sketch-title">The Enduring University</h3>
+  
+    <p>This university is built around disruption. Its organising logic turns on a core question: how might we—the institution and the world around us—work through turbulence productively? Its strength lies in its ability to absorb shocks, reconfigure, and contribute even—especially—amid upheaval.</p>
+  
+    <p>Unlike the Problem-Driven University, which begins with defined challenges, this one prepares for the unknown. It cultivates adaptive capacity across disciplinary and geographic boundaries. Curricula shift in response to rupture—ecological collapse, democratic breakdown, technological upheaval, cultural fracture. Learners and educators work together to analyse the world and find orientation within disorder: to read patterns, test responses, and regain footing when systems give way. They work on the known unknowns—and on the unknown unknowns.</p>
+  
+    <p>The core practice here is institutional foresight, shaped by the logic of antifragility<span id="ref-50" class="sidenote-number"></span><span class="sidenote collapsible">This draws on the work of Nassim Nicholas Taleb, particularly his thinking on antifragility, unpredictability, and the logic of <em>via negativa</em>—strength through subtraction, not addition. There are also quiet echoes here of Jim Collins’s reflections on enduring institutions and the discipline of preserving core purpose through change.</span>. Its work goes beyond absorbing disruption; it is built to learn from it. The university develops systems that don’t just survive volatility, but strengthen through it—refining under pressure, strengthening through use in extreme conditions. Its identity is neither static nor reactive. It protects what matters and experiments where it must: stability at the centre, adaptability at the edge.</p>
+  
+    <p>How might such an institution endure a specific disruption—for instance, political upheaval that threatens to strip funding and promote ideological conformity? It would not depend on mere improvisation. As a university structured for stress, it might contain what such a moment demands: federated credentialling, mirrored archives, distributed governance. These would not be contingencies, but features of its design. Redundancies would be in place, avoiding single points of failure. Its response could unfold at two levels. It might protect its core—the space for inquiry, dialogue, and dissent—by relocating scholars, shifting programmes, and sustaining learning through dispersed infrastructure. In parallel, it could meet the crisis directly: activating civic curricula, supporting legal challenges, and holding space for public reason.</p>
+  
+    <p>Technology, in such an institution, is treated as a condition, as part of the environment in which thinking now unfolds. Like other models, it recognises that tools may shape thought as much as they serve it. But its posture is pragmatic, not performative. Digital systems might be studied for the dependencies they create—for how they alter attention, authority, and memory—but they are also tested at the frontiers, where new practices can emerge without compromising the core. What proves durable, or necessary, may be absorbed more deeply. The university, thus, works to think within these systems, against them when needed, and occasionally beyond them.</p>
+  
+    <p>The Enduring University embodies a paradox: it prepares systematically for the unpredictable. In doing so, it confronts tensions between preservation and adaptation, between investing in readiness and meeting immediate needs. Redundancies require resources. Distributed structures complicate decision-making. A posture of preparedness can strain morale. And success, when defined as the ability to respond to what hasn’t yet happened, is difficult to track. There are tensions it must continue to work through. Perhaps that, too, can be part of its design.</p>
+  
+    <p>I have tried, here, to sketch four possibilities. These are, as I said at the outset, outlines to think with—and to think within. Each offers a way of seeing, and a set of tendencies to cultivate. Though presented in tidy containers, they are not meant to be mutually exclusive. In practice, elements overlap. A Developmental University might house a problem-driven programme focused on climate resilience. A historically centralised institution might begin to distribute its teaching through local studios or embedded networks. Most universities will carry more than one logic at once—overlapping, sometimes contradictory.</p>
+  
+    <p>Then there’s the question of power and agency. Imagination and intentional design, however reasonable, may not be enough to bring these sketches into being. Institutions emerge through compromise, contestation, and the pressure of forces far larger than any vision. The same dynamics these orientations anticipate—or resist—are also shaping what is possible. And each sketch carries assumptions: about whose problems count, what development means, which networks deserve investment, and what ought to last. They suggest possibility. But much more is needed: to sharpen the contours, fill in the colours—and let the images come into view.</p>
+  </div>
+  
+
+
+
+
+  <section id="epilogue">
+    <div class="section-number">Epilogue</div>
+  
+    <p><span class="first-word">I didn't quite</span> set out to write a public essay. My intention was to make sense of what I had been reading and to consolidate my mental notes on AI and education. The immediate provocation came from journalism—my own field—and how it is taught and practised. If AI could now perform many of the skills we were teaching—faster, better—what would still matter next year? What, if anything, might endure?</p>
+  
+    <p>That question opened a wider concern. Across the higher education sector, weakened by falling recruitment, there was urgency—a level of panic—at what many interpreted as disruption. But the responses felt oddly inadequate. From where I stood, AI hadn’t disrupted the university; it had merely disoriented it. And like an unseasoned boxer rushing back in after a punch, swinging wildly, the university seemed to rebound—doubling down on the logic in motion: performative adjustments in place of structural change, and a fierce quest for new markets, especially in the Global South, where student recruitment was recast as collaboration. There was something familiar about this dynamic—an assertive push outward, cloaked in the language of partnership. It reminded me of older patterns. Perhaps bristling with an unresolved historic charge, I came to think of it, privately, as the Recruitment Raj.</p>
+  
+    <p>My own conversations with academic leaders abroad echoed this. In India, for instance, the accelerating attention from institutions was noticed with some bemusement. But what struck me most, in those exchanges, was how little recognition there seemed to be—at least from what I could see—of the extent to which AI demanded rethinking. Not just our curricula, but the very shape of the university in the new world—which, as I saw it, was the more critical question. It became the main thread for this piece.</p>
+  
+    <p>This is also the first serious piece I’ve written with AI. The essay reflects on an altered world—one where we think with machines. How might that actually work, beyond the kinds of usage now acknowledged in academic journals? I experimented extensively with a range of chatbots. Some I used to see how they ‘thought’, others to review, to draft, to edit. But most productively, I used the chatbots to interrogate the work as it emerged: to question, to critique, to sharpen ideas. It was interesting to work in that interlaced, semi-synthetic space, where human and non-human contributions wove together—and to sense, at the edge of awareness, how the machine was shaping my thoughts even as I was shaping its outputs.</p>
+  
+    <p>That sense, in part, was what prompted me to stitch together my scribbles into this fuller format. I wanted to write in a different spirit: to allow for ambiguity, contradiction, and critique. Publishing it as a living document on GitHub felt consistent with that intent. I’ve drawn loosely on traditions of open scholarship—traditions that value transparency, accessibility, and the idea of thinking in public as part of the work itself.</p>
+  
+    <p>Much remains unfinished. Some of the ideas I have offered—the illusions we labour under, the corrective principles—need more unpacking. I have touched on knowledge in the generative world, but the deeper assumptions about what counts as real—the ontological ground on which ways of knowing rest—remain largely untraced. The models, too, need more imaginative expansion. But perhaps that’s fitting. The university, at its best, was not merely a place; it was a scaffolding for transformation. That scaffolding is now stretched—fraying. And meeting this moment will take more than policy or positioning. It will take imagination. And wisdom—the kind that remembers Hypatia, and what was lost when the shelter for thought<span id="ref-51" class="sidenote-number"></span>
+      
+      <span id="ref-51" class="sidenote-number"></span><span class="sidenote collapsible">I've used <em>thought</em> and <em>thinking</em> somewhat interchangeably in this essay. In <a href="https://antilogicalism.com/wp-content/uploads/2017/07/life-of-the-mind.pdf"; target="_blank"><em>The Life of the Mind</em></a>, Hannah Arendt describes <em>thinking</em> as a reflective, non-instrumental activity, "a soundless dialogue between me and myself," while <em>thoughts</em> are what may be "spoken" in that dialogue or expressed outwardly. Thoughts are linked to language. Psychology makes a related distinction: <em>thoughts</em> are typically understood as discrete mental contents—beliefs, images, judgements—while <em>thinking</em> refers to broader cognitive processes such as reasoning, imagining, or reflecting.</span> collapsed in Alexandria.</p>
+  </section>
+  
+
+<p class="footer-paragraph engagement" style="margin-top: 2rem;">
+  This essay lives as a public manuscript. You are welcome to annotate, respond, or think alongside it through this
+  <a href="https://github.com/Chindusree/ReimaginingtheUniversity/issues/1" target="_blank">open review thread</a>.
+</p>
+
+<hr style="margin-top: 2rem; margin-bottom: 2rem; border: none; border-top: 1px solid #ccc;" />
+
+
+<h3 class="footer-heading">How I used AI and technology</h3>
+
+<p class="footer-paragraph">
+  I publish this essay in active collaboration with generative AI. A custom GPT, built within ChatGPT-4o and trained on my previous writing, served as the primary drafting and editing environment. I used Google LM and Monica as summarisers and databases; ChatGPT-4o, Le Chat and DeepSeek for research, literature trawls, and fact-checking; and Claude 3.7 Sonnet and ChatGPT-4o Mini as co-thinkers and reviewers. The code for this page was generated by ChatGPT and Claude Sonnet. Final edits were made in Scrivener, Notion and VS Code.
+</p>
+
+<hr style="margin-top: 2rem; border: none; border-top: 1px solid #ccc;" />
+
+<p style="font-size: 0.8rem; color: #444;">
+  <strong>Cite this as:</strong> Sreedharan, C. (2025) <em>The Age of Generation, the End of Thought</em>. Available at:  
+  <a href="https://chindusree.github.io/ReimaginingtheUniversity/" target="_blank">https://chindusree.github.io/ReimaginingtheUniversity/</a>, DOI: <a href="https://doi.org/10.5281/zenodo.15511599" target="_blank">10.5281/zenodo.15511599</a>
+</p>
+
+
+
+<!-- ENDNOTES SECTION FOLLOWS -->
+<section id="endnotes">
+  <h2>Endnotes</h2>
+</section>
+
+  </body>
+</html>
