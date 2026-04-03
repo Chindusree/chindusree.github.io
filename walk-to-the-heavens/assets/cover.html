@@ -3,11 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <style>
+@font-face {
+  font-family: 'et-book';
+  src: url('../fonts/et-book-roman-line-figures.woff') format('woff');
+}
+@font-face {
+  font-family: 'et-book';
+  src: url('../fonts/et-book-bold-line-figures.woff') format('woff');
+  font-weight: 700;
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   width: 1200px; height: 630px;
   background: #f9f8f4;
-  font-family: Georgia, serif;
+  font-family: 'et-book', Georgia, serif;
   position: relative; overflow: hidden;
 }
 .corner { position: absolute; width: 18px; height: 18px; border: 1px solid #ccc; }
