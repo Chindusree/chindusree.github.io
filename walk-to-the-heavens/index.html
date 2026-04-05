@@ -118,7 +118,128 @@
     blockquote p {
       margin-bottom: 0.8em;
     }
+    .sidenote-number a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .sidenote-number sup {
+      font-size: 0.75rem;
+      color: #999;
+      vertical-align: super;
+      position: relative;
+      top: -0.3em;
+      font-weight: normal;
+    }
+    .sidenote {
+      float: right;
+      clear: right;
+      margin-right: -240px;
+      width: 220px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      position: relative;
+      color: #666;
+      font-style: normal;
+    }
+    .sidenote::before {
+      content: attr(data-number) ". ";
+      font-size: 0.75rem;
+      color: #999;
+    }
+    .sidenote.collapsible {
+      display: none;
+    }
+    .sidenote.active {
+      display: block;
+      margin-top: 2rem;
+      clear: right;
+      position: static;
+    }
+    @media (max-width: 900px) {
+      .sidenote { display: none !important; }
+      #endnotes { display: block; margin-top: 3rem; }
+    }
+    @media (min-width: 901px) {
+      #endnotes { display: none; }
+    }
+    #endnotes {
+      margin-top: 3rem;
+    }
+    #endnotes h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #444;
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+    #endnotes sup {
+      font-size: 0.75rem;
+      color: #999;
+    }
+    #endnotes a.return-link {
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #000;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 0.35rem;
+      font-family: inherit;
+    }
+    #endnotes a.return-link:hover {
+      text-decoration: underline;
+      text-decoration-color: #999;
+    }
+    html {
+      scroll-padding-top: 3rem;
+    }
   </style>
+<script>
+  function toggleSidenote(id, event) {
+    if (window.innerWidth > 900) {
+      const note = document.getElementById(`sidenote-${id}`);
+      if (note.classList.contains('active')) {
+        note.classList.remove('active');
+      } else {
+        const allNotes = document.querySelectorAll('.sidenote');
+        allNotes.forEach(n => n.classList.remove('active'));
+        note.classList.add('active');
+      }
+      if (event) event.preventDefault();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidenotes = document.querySelectorAll('.sidenote');
+    sidenotes.forEach((note, index) => {
+      const number = index + 1;
+      note.setAttribute('id', `sidenote-${number}`);
+      note.setAttribute('data-number', number);
+
+      const ref = document.getElementById(`ref-${number}`);
+      if (ref) {
+        ref.innerHTML = `<a href='#endnote-${number}' onclick='toggleSidenote(${number}, event)'><sup>${number}</sup></a>`;
+      }
+    });
+
+    const endnotesContainer = document.getElementById('endnotes');
+    if (endnotesContainer) {
+      endnotesContainer.innerHTML = '<h2>Endnotes</h2>';
+      sidenotes.forEach((note, index) => {
+        const number = index + 1;
+        const endnote = document.createElement('div');
+        endnote.setAttribute('id', `endnote-${number}`);
+        endnote.innerHTML = `
+          <p><sup>${number}</sup> ${note.innerHTML}
+            <a class="return-link" href="#ref-${number}">&#8617;</a>
+          </p>`;
+        endnotesContainer.appendChild(endnote);
+      });
+    }
+  });
+</script>
 </head>
 
 <body>
@@ -216,13 +337,15 @@
     <p>The cursor blinked. Then words began to appear:</p>
 
     <blockquote>
-      <p>A large language model is mostly a file. Everything a computer holds — text, images, sound — is stored as numbers. A model is no different: a vast set of numbers arranged into layers. Llama 70B, for instance, is eighty layers deep. At its most compressed, it is about forty gigabytes, the size of a film collection.</p>
+      <p>A large language model is mostly a file. Everything a computer holds — text, images, sound — is stored as numbers. A model is no different: a vast set of numbers arranged into layers. Llama 70B<span id="ref-1" class="sidenote-number"></span><span class="sidenote collapsible">We know this because <a href="https://arxiv.org/abs/2307.09288">Llama</a> is open-weight; Meta has released the actual numbers that constitute the model for anyone to inspect. Most frontier models are sealed: you can converse with GPT-4 or Claude, but their weights are not available to you. Llama is an exception. And what the open weights reveal, when probed <a href="https://arxiv.org/html/2312.04333v4">layer by layer</a>, is a structure with a rough division of labour: the lower layers handle logic, pattern recognition, and language — the grammar of thought, one might say, without the content. Factual knowledge and computational power accumulate towards the top. The final layer, in particular, carries the weight of what the model actually knows about the world. Eighty floors, with the reference volumes shelved at the top.</span>, for instance, is eighty layers deep. At its most compressed, it is about forty gigabytes, the size of a film collection<span id="ref-2" class="sidenote-number"></span><span class="sidenote collapsible">It is rather astonishing when you think about it: a whole system that, not a decade ago, would have required the kind of computing infrastructure that only Silicon Valley could afford. This transformation, to a notable extent, is founded on an approach taken by Ashish Vaswani and colleagues at Google. In a paper with the wonderfully confident title <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>, they proposed "a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely". Before this, teaching machines to process language had been, frankly, a complicated business. The Google researchers cut through the previous "convolutions". Rather than reading left to right, one word at a time, the transformer could look at every word in relation to every other word simultaneously — the whole sentence at once, the whole paragraph, all its relationships and dependencies, processed in parallel. It was, in computational terms, the difference between reading a page word by word and taking it in at a glance. Training time reduced from weeks to days. And the result, once trained, small enough to live in a file that you could download before lunch on a decent broadband.</span>.</p>
 
-      <p>The numbers within each layer are organised into matrices, grids, each encoding relationships learned during training. These are what we refer to as 'weights', the record of every tiny adjustment made across months of exposure to vast amounts of human writing: books, arguments, poetry, code. For each stretch of text the model encountered, it tried to predict the next token. When it was wrong, the weights changed slightly, in the direction of a better guess. When it was right, they held. After long months of this, across thousands of specialised chips, the weights were frozen. What they produce emerges only when they work together — the way water emerges from hydrogen and oxygen without resembling either.</p>
+      <p>The numbers within each layer are organised into matrices, grids, each encoding relationships learned during training. These are what we refer to as 'weights', the record of every tiny adjustment<span id="ref-3" class="sidenote-number"></span><span class="sidenote collapsible">In 1986, psychologist David Rumelhart, together with Geoffrey Hinton and Ronald Williams, published a paper in <em>Nature</em> that solved a critical problem in artificial intelligence. How do you teach a network of connected units to learn from its own mistakes? Their answer — backpropagation — worked by sending the error backwards through every connection after each wrong guess, adjusting each weight slightly in the direction of a better answer. The procedure, as <a href="https://gwern.net/doc/ai/nn/1986-rumelhart-2.pdf">they wrote</a>, "repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector". The model training and the weights we hear so much about today are built on their seminal work — a deceptively quiet publication, less than three pages. The trees and the groves and the thorns that catch, think of those as the weights. They touch the travellers. They transform them. The less connected, the less salient, collapses. The more meaningful — in the eyes of the forest, that is — becomes the response.</span> made across months of exposure to vast amounts of human writing: books, arguments, poetry, code. For each stretch of text the model encountered, it tried to predict the next token. When it was wrong, the weights changed slightly, in the direction of a better guess. When it was right, they held. After long months of this, across thousands of specialised chips, the weights were frozen. What they produce emerges only when they work together — the way water emerges from hydrogen and oxygen without resembling either.</p>
 
-      <p>When you send a prompt, it enters as tokens — fragments of words, each converted to its own set of numbers, distinct from every other token. Those numbers pass through the first layer. The matrix of weights transforms them and passes the result forward. That result enters the second layer. And so on, through all eighty. For each next token of the response, the model considers your prompt and everything it has produced so far, and makes another full pass through the layers. Then it does it again for the next token. And again. What we experience as fluent language is the visible result of those repeated hidden passages. Even now, we do not fully understand how these vast numerical passages resolve into particular meanings, judgements, or turns of phrase.</p>
+      <p>When you send a prompt, it enters as tokens — fragments of words, each converted to its own set of numbers, distinct from every other token. Those numbers pass through the first layer. The matrix of weights transforms them and passes the result forward. That result enters the second layer. And so on, through all eighty. For each next token<span id="ref-4" class="sidenote-number"></span><span class="sidenote collapsible">Next-token prediction, the deceptively simple objective that drives the training of every large language model described here, is, at its core, just this: guess the next word. In <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"><em>Language Models are Unsupervised Multitask Learners</em></a>, Radford and colleagues demonstrated that a model trained on nothing but this begins, at scale, to learn translation without being taught to translate, to summarise without being told what a summary is. Later, Kaplan, McCandlish, and Amodei — all then at OpenAI — showed in <a href="https://arxiv.org/abs/2001.08361"><em>Scaling Laws for Neural Language Models</em></a> that performance improved smoothly, reliably, like compound interest, as compute, data, and model size grew. This was when we began to see the billions being pumped into AI — if it was just about scale, well, that only takes money.</span> of the response, the model considers your prompt and everything it has produced so far, and makes another full pass through the layers. Then it does it again for the next token. And again. What we experience as fluent language is the visible result of those repeated hidden passages. Even now, we do not fully understand how these vast numerical passages resolve into particular meanings, judgements, or turns of phrase<span id="ref-5" class="sidenote-number"></span><span class="sidenote collapsible">This is the ghost haunting the AI community — and it is, when you think about it, a rather embarrassing one. We built the thing. We know exactly what went into it: equations, electricity, and an almost deranged quantity of (stolen) human text. And yet, if you ask why it said what it just said, the honest answer is: we have no idea. Dario Amodei, who runs Anthropic, <a href="https://www.darioamodei.com/post/the-urgency-of-interpretability">put it</a>: "When a generative AI system does something, like summarize a financial document, we have no idea, at a specific or precise level, why it makes the choices it does—why it chooses certain words over others, or why it occasionally makes a mistake despite usually being accurate". A whole field has since sprung up to solve this mystery. Mechanistic interpretability, as <a href="https://leonardbereska.github.io/blog/2024/mechinterpreview/">Bereska</a> defines it, is an approach to "reverse engineering neural networks into human-understandable algorithms and concepts". Its practitioners open up the hood and try to work out, layer by layer, what each part is doing, and why. In essence, they are cataloguing the trees in a forest that keeps growing.</span>.</p>
 
-      <p>A metaphor might help. In the great ancient Indian epic Mahabharata, the five Pandava brothers and their wife Draupadi make a final journey on foot to the heavens. One by one, the companions fall. Each is undone by something they could not leave behind. Only Yudhishtira, the eldest, walks on — and a dog, which has followed him. At the gates of heaven, he is told he may enter. But not the dog. He refuses. He will not abandon what has been true to him.</p>
+      <p>A metaphor might help. In the great ancient Indian epic Mahabharata, the five Pandava brothers and their wife Draupadi make a <a href="https://www.sacred-texts.com/hin/m17/m17001.htm" target="_blank">final journey</a> on foot to the heavens. One by one, the companions fall. Each is undone by something they could not leave behind. Only Yudhishtira, the eldest, walks on — and a dog, which has followed him.</p>
+
+      <p>At the gates of heaven, he is told he may enter. But not the dog. He refuses. He will not abandon what has been true to him. The dog, it turns out, was the final test. In a model, as in that journey, what persists is not random. It is what the weights determined to be true<span id="ref-6" class="sidenote-number"></span><span class="sidenote collapsible">The era of next-token prediction, it would appear, is drawing to a close. As Sutskever — OpenAI's former chief scientist, one of the architects of that era — has said publicly, pre-training is plateauing. And there is a darker possibility beneath that: <a href="https://www.nature.com/articles/s41586-024-07566-y">Shumailov and colleagues</a> showed in 2024 that models trained on AI-generated data set off a "degenerative process" — the data they generate "end up polluting the training set of the next generation". Being trained on that polluted data, the models "mis-perceive reality". It has a slightly eerie ring, that phrase, when applied to a file of numbers. And yet it is the right word. The internet is already filling with machine-made text. The models of tomorrow will train on it. Like Draupadi and the younger Pandavas in our story, one by one, the companions are falling. What might survive — or so Dupoux, LeCun and Malik argue in <a href="https://arxiv.org/abs/2603.15381"><em>Why AI Systems Don't Learn and What to Do About It</em></a> — is another approach entirely, transcending crude prediction. Closer, perhaps, to Yudhishtira.</span>.</p>
 
       <p>Let me write you the story to illustrate…</p>
     </blockquote>
@@ -232,10 +355,14 @@
     <a href="https://chindusree.github.io/" style="display: block; font-size: 0.75rem; font-variant: small-caps; letter-spacing: 0.12em; color: #bbb; text-decoration: none; margin-bottom: 0.375rem;" onmouseover="this.style.color='#444'" onmouseout="this.style.color='#bbb'">← Home</a>
     <hr style="margin-top: 2rem; border: none; border-top: 1px solid #ccc;" />
     <p style="font-size: 0.8rem; color: #444;">
-      <strong>Cite this as:</strong> Sreedharan, C. (2026) <em>A Walk to the Heavens: A Creative Explanation of How LLMs Work</em>. Available at:
+      <strong>Cite this as:</strong> Sreedharan, C. (2025) <em>A Walk to the Heavens: A Creative Explanation of How LLMs Work</em>. Available at:
       <a href="https://chindusree.github.io/walk-to-the-heavens/" target="_blank">https://chindusree.github.io/walk-to-the-heavens/</a>
     </p>
   </footer>
+
+  <section id="endnotes">
+    <h2>Endnotes</h2>
+  </section>
 
 </body>
 </html>
