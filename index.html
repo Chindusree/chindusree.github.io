@@ -17,7 +17,7 @@
     }
     @font-face {
       font-family: 'et-book-italic';
-      src: url('reimagining-university/fonts/et-book-italic-line-figures.woff') format('woff');
+      src: url('reimagining-university/fonts/et-book-display-italic-old-style-figures.woff') format('woff');
       font-style: italic;
     }
 
@@ -91,6 +91,23 @@
     }
     .walk-standfirst:hover { color: #555; }
 
+    /* Second satellite, mirrored bottom-left */
+    .appease-entry {
+      position: absolute; bottom: 12%; left: 7%;
+      max-width: 15rem; text-align: left;
+    }
+
+    /* Narrow screens: stack the satellites instead of letting them collide */
+    @media (max-width: 700px) {
+      .centre { top: 30%; width: 86%; }
+      .walk-entry, .appease-entry {
+        left: 7%; right: 7%;
+        max-width: none; text-align: center;
+      }
+      .appease-entry { bottom: 26%; }
+      .walk-entry { bottom: 9%; }
+    }
+
   </style>
 </head>
 <body>
@@ -110,6 +127,14 @@
       The Age of Generation
       <span class="main-subtitle">The End of Thought</span>
     </a>
+  </div>
+
+  <!-- Third piece bottom left -->
+  <div class="appease-entry">
+    <a href="https://chindusree.github.io/appeasing-the-cold-gods-of-quantity/" class="walk-title">
+      Appeasing the Cold Gods of Quantity
+    </a>
+    <a href="https://chindusree.github.io/appeasing-the-cold-gods-of-quantity/" class="walk-standfirst" style="text-decoration: none; display: block;">A field guide to reviewer reports<br>and a case for publishing with purpose</a>
   </div>
 
   <!-- Second piece bottom right -->
