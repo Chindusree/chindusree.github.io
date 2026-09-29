@@ -1,0 +1,536 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Cold Gods of Quantity — Chindu Sreedharan</title>
+
+  <meta property="og:title" content="The Cold Gods of Quantity" />
+  <meta property="og:url" content="https://chindusree.github.io/cold-gods-of-quantity/" />
+  <meta property="og:image" content="https://chindusree.github.io/cold-gods-of-quantity/assets/cover.jpg" />
+  <meta property="og:description" content="A field guide to surviving peer reviews, and a case for publishing with purpose." />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Cold Gods of Quantity" />
+  <meta name="twitter:image" content="https://chindusree.github.io/cold-gods-of-quantity/assets/cover.jpg" />
+  <meta name="twitter:description" content="A field guide to surviving peer reviews, and a case for publishing with purpose." />
+
+  <style>
+    @font-face {
+      font-family: 'et-book';
+      src: url('fonts/et-book-roman-line-figures.woff') format('woff');
+    }
+    body {
+      font-family: 'et-book', Georgia, serif;
+      font-size: 1.125rem;
+      background-color: #fdfcf9;
+      margin: 0;
+      padding: 5rem 1.5rem 4rem;
+      line-height: 1.6;
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #111;
+      position: relative;
+    }
+    .raised::first-letter {
+      font-size: 1.5em;
+      position: relative;
+      top: -0.2em;
+      font-weight: normal;
+      margin-right: 0.05em;
+    }
+    .byline {
+      font-size: 1.3rem;
+      letter-spacing: 0.06em;
+      font-variant: small-caps;
+      color: #444;
+      margin-bottom: 2.2rem;
+    }
+    .byline span {
+      font-weight: normal;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 1.8rem;
+      line-height: 1.5;
+    }
+    .section-number {
+      text-align: center;
+      font-size: 1.1rem;
+      font-variant: small-caps;
+      color: #666;
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+    .credits-note {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #666;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      padding-top: 1.2rem;
+      font-style: normal;
+    }
+    p a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #bbb;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+    p a:hover {
+      color: #000;
+      text-decoration-color: #777;
+    }
+    .footer-heading {
+      font-weight: normal;
+      font-size: 1rem;
+      color: #555;
+      font-variant: small-caps;
+      letter-spacing: 0.03em;
+      margin-top: 2rem;
+      margin-bottom: 0.3rem;
+    }
+    .footer-paragraph {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+      margin-top: 0;
+    }
+    .footer-paragraph a {
+      color: #666;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .footer-paragraph a:hover {
+      color: #000;
+      text-decoration-color: #999;
+    }
+    blockquote {
+      margin: 1.5rem 0;
+      padding: 0;
+      border: none;
+      font-style: italic;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    blockquote p {
+      margin-bottom: 0.8em;
+    }
+    ol {
+      margin: 1.5rem 0;
+      padding-left: 1.6rem;
+    }
+    ol li {
+      margin-bottom: 0.7rem;
+      padding-left: 0.2rem;
+    }
+    .sidenote-number a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .sidenote-number sup {
+      font-size: 0.75rem;
+      color: #999;
+      vertical-align: super;
+      position: relative;
+      top: -0.3em;
+      font-weight: normal;
+    }
+    .sidenote {
+      float: right;
+      clear: right;
+      margin-right: -240px;
+      width: 220px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      position: relative;
+      color: #666;
+      font-style: normal;
+    }
+    .sidenote::before {
+      content: attr(data-number) ". ";
+      font-size: 0.75rem;
+      color: #999;
+    }
+    .sidenote.collapsible {
+      display: none;
+    }
+    .sidenote.active {
+      display: block;
+      margin-top: 2rem;
+      clear: right;
+      position: static;
+    }
+    @media (max-width: 900px) {
+      .sidenote { display: none !important; }
+      #endnotes { display: block; margin-top: 3rem; }
+    }
+    @media (min-width: 901px) {
+      #endnotes { display: none; }
+    }
+    #endnotes {
+      margin-top: 3rem;
+    }
+    #endnotes h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #444;
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+    #endnotes sup {
+      font-size: 0.75rem;
+      color: #999;
+    }
+    #endnotes a.return-link {
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #000;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 0.35rem;
+      font-family: inherit;
+    }
+    #endnotes a.return-link:hover {
+      text-decoration: underline;
+      text-decoration-color: #999;
+    }
+    nav.side-nav.desktop {
+      position: fixed;
+      top: 4rem;
+      left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      font-variant: small-caps;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      color: #444;
+      z-index: 10;
+    }
+    nav.side-nav.desktop a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #ddd;
+      text-underline-offset: 3px;
+    }
+    nav.side-nav.desktop a:hover {
+      color: #000;
+      text-decoration-color: #999;
+    }
+    .mobile-top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.25rem;
+      background-color: #fdfcf9;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 0.75rem;
+      font-family: 'et-book', Georgia, serif;
+    }
+    .mobile-nav-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #444;
+      cursor: pointer;
+      padding: 0.2rem;
+      line-height: 1;
+    }
+    nav.side-nav.mobile {
+      display: none;
+      position: fixed;
+      top: 2.5rem;
+      right: 1.5rem;
+      background-color: #fdfcf9;
+      padding: 1rem;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 998;
+      font-variant: small-caps;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    nav.side-nav.mobile a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #ddd;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    nav.side-nav.mobile a:hover {
+      color: #000;
+      text-decoration-color: #999;
+    }
+    nav.side-nav.mobile.active {
+      display: flex;
+    }
+    @media (max-width: 900px) {
+      nav.side-nav.desktop { display: none; }
+    }
+    @media (min-width: 901px) {
+      .mobile-top-bar, nav.side-nav.mobile { display: none; }
+    }
+    html {
+      scroll-padding-top: 3rem;
+    }
+  </style>
+<script>
+  function toggleSidenote(id, event) {
+    if (window.innerWidth > 900) {
+      const note = document.getElementById(`sidenote-${id}`);
+      if (note.classList.contains('active')) {
+        note.classList.remove('active');
+      } else {
+        const allNotes = document.querySelectorAll('.sidenote');
+        allNotes.forEach(n => n.classList.remove('active'));
+        note.classList.add('active');
+      }
+      if (event) event.preventDefault();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidenotes = document.querySelectorAll('.sidenote');
+    sidenotes.forEach((note, index) => {
+      const number = index + 1;
+      note.setAttribute('id', `sidenote-${number}`);
+      note.setAttribute('data-number', number);
+
+      const ref = document.getElementById(`ref-${number}`);
+      if (ref) {
+        ref.innerHTML = `<a href='#endnote-${number}' onclick='toggleSidenote(${number}, event)'><sup>${number}</sup></a>`;
+      }
+    });
+
+    const endnotesContainer = document.getElementById('endnotes');
+    if (endnotesContainer) {
+      endnotesContainer.innerHTML = '<h2>Endnotes</h2>';
+      sidenotes.forEach((note, index) => {
+        const number = index + 1;
+        const endnote = document.createElement('div');
+        endnote.setAttribute('id', `endnote-${number}`);
+        endnote.innerHTML = `
+          <p><sup>${number}</sup> ${note.innerHTML}
+            <a class="return-link" href="#ref-${number}">&#8617;</a>
+          </p>`;
+        endnotesContainer.appendChild(endnote);
+      });
+    }
+  });
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('click', function (event) {
+      const nav = document.getElementById('mobileNav');
+      const toggle = document.querySelector('.mobile-nav-toggle');
+      if (!nav || !toggle) return;
+      const inside = nav.contains(event.target);
+      const onToggle = toggle.contains(event.target);
+      if (nav.classList.contains('active') && !inside && !onToggle) {
+        nav.classList.remove('active');
+      }
+    });
+  });
+</script>
+</head>
+
+<body>
+  <div class="mobile-top-bar">
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">&#8801;</button>
+  </div>
+  <nav class="side-nav mobile" id="mobileNav">
+    <a href="#overture">Overture</a>
+    <a href="#dissection">Dissection</a>
+    <a href="#response">Response</a>
+    <a href="#philosophy">Philosophy</a>
+  </nav>
+  <nav class="side-nav desktop">
+    <a href="#overture">Overture</a>
+    <a href="#dissection">Dissection</a>
+    <a href="#response">Response</a>
+    <a href="#philosophy">Philosophy</a>
+  </nav>
+  <header>
+    <h1>The Cold Gods of Quantity</h1>
+    <h2 class="subtitle">A field guide to surviving peer reviews, and a case for publishing with purpose</h2>
+
+    <div class="byline">
+      <a href="https://chindusree.github.io/" style="text-decoration: none; color: inherit;">
+        <span>C</span>hindu <span>S</span>reedharan
+      </a>
+    </div>
+  </header>
+
+  <section id="overture">
+    <div class="section-number">Overture</div>
+    <p class="raised">Publishing in peer-reviewed journals is a painstaking&mdash;and often painful&mdash;business. An editor may reject a submission within days, sometimes overnight. A manuscript might wait weeks for reviewers to be found, only for them to interpret the work in conflicting ways, focus on the peripheral, or question decisions that appeared entirely reasonable. Some reports will be thoughtful and constructive; others cursory, contradictory, or difficult to use.</p>
+
+    <p>In one peer-review exercise I saw up close, one report consisted almost entirely of the assurance that the authors had &ldquo;done a good job of the paper&rdquo;. Another reviewer argued for amendments, working diligently through the paper&rsquo;s questions, theory, method, and claims.</p>
+    <p>That is the first difficulty of making sense of peer review. Reviews are eclectic, rarely objective; products of an <a href="https://www.nature.com/articles/d41586-025-02457-2" target="_blank" rel="noopener">overloaded system</a>, they may differ, sometimes in diametrically opposite directions, for a variety of reasons&mdash;from cognitive biases to epistemic differences to egotism to ethical laxity to, yes, sheer laziness. So authors need to consider what the reviewers say, <em>critically</em>. They need to separate the verdict from the reasoning, then determine what kinds of problem the reviewers have identified.</p>
+
+
+    <p>The first skill in responding to peer review is therefore diagnosis. Is this an assertion or a reasoned argument? Is the problem local, structural, or foundational? Can it be clarified or revised, or should something be rethought or rebuilt? Should the author concede, clarify, or counter?</p>
+
+    <p>Recognising these distinctions does not make publication easy. Nor does it mean that reviewers are always correct. It does, however, make the process more legible. It helps authors decide what can be addressed or clarified, and what may need to be challenged.</p>
+
+    <p>That is where our discussion begins, with the practicalities of peer review. What are reviewers looking for? How should conflicting reports be read, and when should an author concede, clarify, or push back?</p>
+
+    <p>These practical questions lead to a more fundamental one. Peer review helps determine a paper&rsquo;s publishability&mdash;whether it meets a journal&rsquo;s existing standards. Is that all there is to scholarship? Or might we&mdash;<em>ought</em> we&mdash;think of publication as a milestone on the way to a more idealistic destination?</p>
+
+    <p>We ought. We must. That is the case I want to make today.</p>
+  </section>
+
+  <section id="dissection">
+    <div class="section-number">Dissection</div>
+    <p>Most reviewer criticism can be traced to three broad questions.<span id="ref-1" class="sidenote-number"></span><span class="sidenote collapsible">While much in the academy has changed, the faults reviewers pick on have barely budged. In 1978, Charles Bonjean and Jan Hullum, writing in <em>PS: Political Science &amp; Politics</em>, <a href="https://doi.org/10.2307/418821" target="_blank" rel="noopener">catalogued six hundred rejections</a>. Three grounds accounted for more than three-quarters of the reasons given: the contribution was insignificant, the method flawed, the theory unsound. Half a century on, the diagnostic vocabulary remains stubbornly the same.</span> Does the study matter? Can its claims be trusted? Does the paper deliver what it said it would?</p>
+
+    <p>The first concerns contribution. Reviewers may describe a paper as unsurprising, incremental, or insufficiently original. In one review process, the objection was expressed bluntly: &ldquo;The manuscript do not advance what we know&rdquo;; the findings were &ldquo;generic and rather trivial&rdquo;. The criticism was not <em>quite</em> that the topic, or even the study, was unimportant. It was that the authors had not shown what became newly understandable <em>because</em> of their inquiry.</p>
+
+    <p>A contribution does not have to be a dramatic discovery. It might provide new evidence, examine a familiar problem in a different context, challenge an accepted explanation, refine a concept, or show that an established pattern does not apply everywhere. But it should be sufficiently clear and considered; and the reader should not have to construct that contribution on the author&rsquo;s behalf.</p>
+
+    <p>One reason may be that the focus is diffused. Papers often encounter difficulty because they attempt to do too much. A study may begin by examining news coverage, move towards social-media effects, and conclude with claims about public trust. Such linkages might be plausible, but the paper may not have the evidence or space to establish all three.</p>
+
+    <p>Reviewers then ask what the study is actually about. What is the key contribution and what might need to be removed so that it becomes visible?</p>
+
+    <p>Theoretical criticism often reflects the same uncertainty. A paper may contain a substantial literature review and still be theoretically weak. The problem then is not a shortage of relevant references, but that scholarship has been parachuted in without thinking through the &lsquo;so what&rsquo;; without being used to build an argument.</p>
+
+    <p>The literature we use should help define the problem, shape the research questions, and inform the analysis. Adding more citations will not resolve the problem if the relationship between those citations and the study remains unclear.</p>
+
+    <p>The second broad question that reviewers seek to be convinced on involves trust. Every research project involves choices. Why this case, this sample, this period, this platform&mdash;and this method or approach. Authors may regard those choices as obvious, particularly when they know the subject well. Reviewers cannot be expected to make the same assumptions.</p>
+
+    <p>In one rejected submission, a terse and unpolished report raised a single, blunt objection: &ldquo;Sample: Sample is not justified.&rdquo; A second reviewer reached the same concern through an elaborate examination of how the outlets had been selected.</p>
+
+    <p>Similarly, naming a method is not the same as explaining how it was operationalised. In one review for a prestigious journal, a reviewer began doing the arithmetic that the manuscript had left to its readers. A corpus became several national samples, then a much smaller group of texts for qualitative analysis, but the reason for each reduction was unclear. Who had coded the material? How had the interviewees been selected? How were their responses analysed? &ldquo;This is all astonishingly vague,&rdquo; the reviewer concluded. The problem was not a shortage of numbers&mdash;there was an abundance of that&mdash;but the absence of transparency about the corpus and its analysis. Without a rationale for those sampling decisions, and clear inclusion and exclusion criteria at each stage, the reader cannot assess the adequacy of the design, or the claims being made on that basis.</p>
+
+    <p>The third question is whether the paper delivers what it promises. Research objectives, methods, findings, and conclusions need to fit together. A paper may ask a causal question but use a method capable only of identifying patterns. It may promise to examine audience responses but analyse only news content. It may present findings that are interesting but do not answer the questions established at the beginning.</p>
+
+    <p>Reviewers may describe this as a problem of alignment. The individual components may each be competent, but they do not yet form a convincing whole. In such cases, you might get a response that says, as one reviewer put it for a well-regarded journal, &ldquo;There needs to be a better fit between the findings, methodology, and the objective of the study.&rdquo;</p>
+
+    <p>Even where the parts fit, a paper can flounder in the analysis itself. Authors sometimes mistake extensive description for argument, assuming the data speaks for itself. A reviewer is then left with a heap of findings and the onerous task of piecing together what it all means. So the question is not simply, &ldquo;What did you find?&rdquo; It is what the many &lsquo;things&rsquo; you found mean, and what bigger story you can tell from them.</p>
+
+    <p>Reviewers, of course, are not always careful and constructive&mdash;nor, for that matter, correct. They differ in expertise and diligence. A short review is not necessarily a poor one; a referee may identify a decisive problem in a few sentences. Nor is a long review necessarily authoritative. Detail can reveal expertise, but it can also mask misunderstanding, bias, or, occasionally, a demand for the paper the reviewer feels the author should have written.</p>
+
+    <p>Some reports offer almost nothing. The approving review discussed at the beginning consisted only of praise and good wishes. It gave the editor no reasoning to assess and the authors no guidance they could use, so the editor called in a third reviewer. Positive reviews can be lazy too.</p>
+
+    <p>Authors therefore have to read past tone. What, precisely, is being claimed? Is the criticism supported? Does it identify a weakness that another reader could reasonably encounter? Is there an actionable point beneath the frustration, the profusion of exclamation and question marks that can pockmark a report?</p>
+
+    <p>The recommendation and the reasoning should therefore be read separately. Accept, Revise, and Reject are verdicts. What is more important to the author is what the reviewer has identified, how well the criticism is supported, how deep the problem runs&mdash;and whether the report offers a credible route forward. That gives us a way of sorting criticism by depth:</p>
+
+    <ol>
+      <li><em>Local criticism</em> asks for correction or clarification. Revise a sentence, define a term, supply a citation, or add context.</li>
+      <li><em>Structural criticism</em> asks the paper to be reorganised or developed by clarifying the objective, strengthening the conceptual framework, justifying the sample, or explaining the analytical process.</li>
+      <li><em>Foundational criticism</em> questions whether the study can sustain the paper at all: whether the sample fits the research problem, whether the central concept has been established, or whether the method can produce the kind of claim being made.</li>
+    </ol>
+
+    <p>In practice, these criticisms might be phrased differently. The constructive reviewers diagnose the problems and offer a clear route towards revision. Others describe weaknesses that require the entire study to be rebuilt. And occasionally, a reviewer offers little more than a nod&mdash;or an extended growl.</p>
+
+    <p>The same manuscript may receive one recommendation to accept and another to reject. In one set of reports, both reviewers identified much the same weaknesses: an inadequately justified case, search terms that predisposed the findings, a thin conceptual foundation, and an opaque sample. They disagreed only on whether those problems could be repaired. One recommended rejection; the other major revision and re-review. When independent reviewers reach the same diagnosis by different routes, the author might want to pause and reflect.<span id="ref-2" class="sidenote-number"></span><span class="sidenote collapsible">Agreement is not the normal condition. Peter Rothwell and Christopher Martyn, examining two neuroscience journals for <a href="https://doi.org/10.1093/brain/123.9.1964" target="_blank" rel="noopener"><em>Brain</em></a>, found reviewers concurring on the verdict at about the rate chance would predict, and a later <a href="https://doi.org/10.1371/journal.pone.0014331" target="_blank" rel="noopener">meta-analysis of 48 such studies</a> found much the same. Such agreement is therefore atypical.</span></p>
+
+    <p>Another pair of reports split more starkly. One reviewer offered a series of specific, manageable changes and said, &ldquo;I should like to see this paper published&rdquo;. The other queried whether the interviewees belonged to the group the paper claimed to study, whether the findings were distinctive to that group, and whether the central concept had been established at all. That reviewer concluded that the paper &ldquo;cannot be amended to bring it to a publishable standard&rdquo;. The editor rejected it.</p>
+
+    <p>A harsh recommendation to a prestigious journal is usually taken at its word by the editors, unless it is plainly lazy. It tends to deserve the credence, because such recommendations often reach into the foundations of the study. A missing citation can be supplied. A section can be reorganised. But if the sample does not represent the population the paper claims to study, or if the central concept has not been established, revision may require new data, new analysis, or a different argument.</p>
+
+    <p>This is the distinction between difficulty and fixability. A long list of comments may still describe a repairable paper. A single objection may be terminal if it undermines the study&rsquo;s premise.</p>
+  </section>
+
+  <section id="response">
+    <div class="section-number">Response</div>
+    <p>Once the criticism has been diagnosed, the author must decide how to respond. The typical expectation is a revised manuscript, with changes highlighted, together with a response sheet. The options available to an author are straightforward: concede, clarify, and counter (politely).</p>
+
+    <p><em>Concede</em> when the reviewer has identified a genuine weakness. A direct response (&ldquo;That is a fair point&rdquo;), followed by the action taken, usually works. But concession can also be tactical. If a reviewer is fixated on a minor point, there is little value in defending a sentence, paragraph, or structural choice that can be adjusted without compromising the paper.</p>
+
+    <p><em>Clarify</em> when the criticism rests on a misunderstanding. But clarification alone may not always be enough. If a reviewer misunderstood the paper, something in the text probably allowed that misunderstanding. Explain what was intended, then consider revising the manuscript so that the next reader does not stumble on the same problem.</p>
+
+    <p><em>Counter</em> when there are defensible scholarly or methodological reasons not to follow the suggestion. Be careful, though. A counterargument should be grounded in evidence, principle, or the limits of the study, not in the author&rsquo;s attachment to the original version. It should also be framed politely&mdash;the last thing you want is to pick an unintentional fight, particularly with a growly reviewer&mdash;and state clearly whether any revision has been made in response to the underlying concern.</p>
+
+    <p>Sometimes a report may misread the paper, make incompatible demands, or provide too little explanation to guide revision. In such cases, the author has the option of a considered rebuttal. If a request is genuinely impossible or contradictory, that is something to take up directly with the editor.</p>
+
+    <p>How might that look? Consider the approach of a wonderfully diplomatic colleague who has perfected the art of disarming reviewers. In one contested revision, his response sheet was less an exercise in defence than an intellectual dialogue. Where a referee identified a genuine blind spot, he conceded without fuss and revised. Where he disagreed, he politely &ldquo;begged to differ&rdquo;, cited the relevant literature to hold his ground, and then&mdash;crucially&mdash;added a clarifying note to the manuscript anyway, recognising that if an expert had misunderstood him, the text had perhaps allowed it. Reading the exchange, one gets the impression of a scholar engaged in an enjoyable, confident conversation with his peers.</p>
+
+    <p>The way the response is framed is important, too. My colleague numbered every comment, aligned it to the action, and marked up the changes in the revision. An annotated manuscript allows the editor and reviewers to verify the changes quickly, soothing whatever nerves you might have unwittingly frayed, and it signals that the author has treated the process seriously.</p>
+
+    <p>We could, then, think of a useful response as having four parts:</p>
+
+    <ol>
+      <li>State the reviewer&rsquo;s point clearly.</li>
+      <li>Say whether you agree, partly agree, or disagree.</li>
+      <li>Explain the reasoning, especially where you disagree.</li>
+      <li>Identify the action taken and where the change appears.</li>
+    </ol>
+
+    <p>Then there&rsquo;s what happens when authors choose to treat the review as an argument to win. In one memorable revise-and-resubmit, the authors used the response sheet largely to defend their initial methodological choices. Rather than addressing the referee&rsquo;s concerns, they cited&mdash;somewhat confrontationally&mdash;the <em>other</em> reviewer&rsquo;s praise as a character witness for their paper. The reviewer&rsquo;s second report begins courteously enough. &ldquo;I see that you disagree with most of my suggestions,&rdquo; they wrote, &ldquo;and defend your initial choices rather than make adjustments to the paper.&rdquo; The reviewer then dismantles the rebuttal&mdash;the authors having made it rather easy in their obstinacy&mdash;point by point, and a paper that could have been saved becomes a hard reject.</p>
+
+    <p>The lesson here is not that authors must appease a reviewer. But disagreement carries a burden of proof. A reviewer&rsquo;s kind words are not evidence, and they cannot serve as a character witness for your paper. Nor do token, performative adjustments help&mdash;and it is rarely wise to strike a confrontational tone with an irate reviewer cloaked in anonymity.</p>
+
+    <p>But all of this, the diagnosis and the diplomacy alike, is about surviving the process. It leaves untouched the question we began with, whether publication is all there is to scholarship.</p>
+  </section>
+
+  <section id="philosophy">
+    <div class="section-number">Philosophy</div>
+    <p>Peer review, as these cases demonstrate, is fragile, fallible&mdash;a deeply human business. It lends an aura of scientific rigour<span id="ref-3" class="sidenote-number"></span><span class="sidenote collapsible">This aura is not as old as we tend to think. <em>Nature</em> did not require external refereeing for every paper it published until 1973. The historian Melinda Baldwin has <a href="https://melinda-baldwin.com/wp-content/uploads/2019/09/baldwin-isis-article.pdf" target="_blank" rel="noopener">traced the term &ldquo;peer review&rdquo;</a> to Cold War America&rsquo;s grant committees and medical review boards&mdash;<em>JAMA</em> did not use it for journal refereeing until 1981. When Congress turned on federally funded science in the 1970s, scientists reached for the phrase, which implicitly cast anyone without a scientific background as unqualified to judge the work, and argued that taking funding decisions out of expert hands would corrupt science itself. Few came away from the 1975 hearings satisfied, but the episode entrenched expert-led review rather than delivering Congressional oversight. What we take for a timeless guarantor of scientific quality is a rhetorical settlement barely fifty years old in its current form, an optional bureaucratic process recast as the guarantee of legitimacy&mdash;though informal refereeing dates to 18th- and 19th-century scholarly communities.</span> to what is fundamentally an uneven, subjective transaction. In Richard Smith&rsquo;s memorable words, it is &ldquo;something of a lottery&rdquo;, which, &ldquo;in addition to being poor at detecting gross defects and almost useless for detecting fraud&rdquo;, is &ldquo;prone to bias, and easily abused&rdquo;.<span id="ref-4" class="sidenote-number"></span><span class="sidenote collapsible">Smith had the evidence. Under his editorship, the <em>BMJ</em> planted deliberate errors into accepted papers and sent them out unannounced to reviewers. In the first trial, researchers <a href="https://jamanetwork.com/journals/jama/fullarticle/187748" target="_blank" rel="noopener">introduced eight deliberate weaknesses</a>: the average reviewer spotted only two; about one in six caught none. Some 10 years later, when a similar experiment was <a href="https://journals.sagepub.com/doi/10.1258/jrsm.2008.080062" target="_blank" rel="noopener">repeated at an even larger scale across hundreds of reviewers</a>, the outcome was virtually identical&mdash;reviewers still missed most of the major flaws, and even formal training did little to improve the results.</span></p>
+
+    <p>How, then, might we navigate all this without letting it define our scholarship? Might we take refuge in the <em>philosophy</em> of Doctor of Philosophy, and look for solace in its genealogy? Tracing the title, we can find at least three distinct points, each leaving behind a different set of values and, together, if we choose to see it, offering an alternative to the metric-driven culture we now take for granted.</p>
+
+    <p><em>Philosophia</em> meant, literally, the love of wisdom. For the ancient Greeks, philosophy was not principally a body of knowledge to be mastered, but an inquiry into how one ought to live. When Socrates told the Athenian court that the unexamined life was not worth living, he placed questioning at the centre of a life consciously lived. Aristotle would later give that life a civic setting. Human flourishing belonged within the <em>polis</em>; the purpose of political community was not merely to make life possible, but to make the good life possible.</p>
+
+    <p>For a scholar, this poses a fundamental question. Is this work worth the time I am about to pour into it? How might it, directly or indirectly, help the world? Research consumes us, directs our attention towards some problems rather than others, and eventually places something out into our world. Choosing a question is therefore choosing what deserves our attention and what, through that attention, we hope to contribute beyond ourselves.</p>
+
+    <p>Later, as medieval universities began to take shape, the idea of knowledge passing from one generation to the next acquired an institutional form. The early doctorate, <em>licentia docendi</em>, was literally the licence to teach. Scholarship, at this point in time, was understood as the transmission of mastery from one generation to the next. It was an act of inheritance. In 1159, the medieval scholar John of Salisbury recorded a remark in <a href="https://ia800902.us.archive.org/10/items/themetalogiconofjohnofsalisbury/The%20Metalogicon%20of%20John%20of%20Salisbury.pdf" target="_blank" rel="noopener"><em>Metalogicon</em></a> from Bernard of Chartres: we are like &ldquo;dwarfs perched on the shoulders of giants&rdquo;.<span id="ref-5" class="sidenote-number"></span><span class="sidenote collapsible">The remark was not his own. In <em>Metalogicon</em> (Book III, Chapter 4), John of Salisbury attributes the image to his teacher&rsquo;s teacher, Bernard of Chartres&mdash;making the metaphor an inheritance transmitted by the exact mechanism it describes. Robert K. Merton later traced its lineage from Bernard through Isaac Newton&rsquo;s 1675 letter to Robert Hooke and into modern thought in <em>On the Shoulders of Giants: A Shandean Postscript</em> (1965), recursively performing the very cumulative scholarship the aphorism celebrates.</span> We see more and further than our predecessors, Bernard observed, not through any sharpness of our own sight or stature of our bodies, but because we are lifted up and borne aloft on their gigantic mass. It is a wonderful image that captures the passing of knowledge.</p>
+
+    <p>We could, hence, think of the peer-reviewed paper, too, as an act of inheritance. Every piece of research enters a conversation that began before us. The concepts, methods, archives, and problems we work with have been handed down, one way or another, through the sustained labour of others. Citation, at its best, is not a ritual of academic compliance, but an acknowledgement of that intellectual debt. Yet an inheritance is not only received; it is sorted, curated. Not everything handed down should be repeated uncritically. Some traditions preserve vital wisdom; others entrench omissions and prejudices and errors. The question then is not simply, What can I add to the growing pile, but what ought I to carry forward&mdash;and what, in carrying it, ought I to preserve, correct, or renew?</p>
+
+    <p>In the early nineteenth century, Wilhelm von Humboldt articulated another ideal for the modern research university: <em>Wissenschaft</em>, the sustained pursuit of knowledge for its own sake, coupled with <em>Bildung</em>, the personal and intellectual formation of the scholar. The university, in his view, should treat <em>Wissenschaft</em> as &ldquo;<a href="https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/wilhelm-von-humboldt-s-treatise-quot-on-the-internal-and-external-organization-of-the-higher-scientific-institutions-in-berlin-quot-1810" target="_blank" rel="noopener">a problem which has not yet been fully resolved</a>&rdquo;, to be pursued in a state of constant research. The ethos of an institution where &lsquo;new&rsquo; knowledge is pursued and shared is worth preserving. And yet the university we actually work in has been threatening it for a long time.</p>
+
+    <p>As early as 1942, in <em>The Academic Man</em>, the sociologist Logan Wilson noted how institutional pressures were already shifting the scholarly climate. &ldquo;The prevailing pragmatism forced upon the academic group,&rdquo; he wrote, &ldquo;is that one must write something and get it into print. Situational imperatives dictate a &lsquo;publish or perish&rsquo; credo within the ranks.&rdquo;<span id="ref-6" class="sidenote-number"></span><span class="sidenote collapsible">The phrase &lsquo;publish or perish&rsquo; is often credited to Logan Wilson, but as <a href="https://www.bmj.com/content/390/bmj.r1456" target="_blank" rel="noopener">Jeffrey Aronson traces</a> in the <em>BMJ</em>, its pedigree is considerably older. Variations were circulating among geographers as early as 1904, and by 1938 Isaiah Bowman cited it as an established grievance. Decades later, Eugene Garfield <a href="https://garfield.library.upenn.edu/commentaries/tsv10(12)p11y19960610.pdf" target="_blank" rel="noopener">tried to track down</a> its first author without success&mdash;proving, perhaps, that some academic anxieties are timeless.</span> Over the eight decades since, that situational imperative has hardened into a sprawling audit culture of journal rankings, impact factors, and output counts. A reasonable expectation&mdash;that scholars should contribute to the collective pool of knowledge&mdash;has been converted into an instruction to produce countable units.</p>
+
+    <p>Today, that machinery is buckling under its own weight. It was, one could say, broken even when it seemed unbroken. That it still occasionally yields value&mdash;a sound diagnosis here, a rescued paper there&mdash;is a testament to individual goodwill, not institutional health. Editorial desks are flooded.<span id="ref-7" class="sidenote-number"></span><span class="sidenote collapsible">Between 2016 and 2022, published papers <a href="https://doi.org/10.1162/qss_a_00327" target="_blank" rel="noopener">surged by 47 per cent</a>&mdash;a boom that vastly outpaced the human supply of researchers. As many a weary editor will tell you, securing two reviewers now takes a dozen polite entreaties, calling on an exhausted pool of volunteer labour to sustain an industry that is simultaneously expanding and collapsing under its own volume.</span> Journals, old and young, prestigious and peripheral, scramble for reviewers who have neither the time nor the inclination. The reports that trickle back are increasingly performative or perfunctory, and what began as a community testing ideas has turned into an exhausted, metric-driven industry.</p>
+
+    <p>This, I think, is where we can draw sustenance from that neglected word, philosophy. In borrowing from the traditions it has traversed&mdash;the Greeks asking how to live; the medieval masters teaching us to inherit, to stand on the shoulders of those before us; Humboldt insisting on inquiry&mdash;we might ask what mere publishability cannot tell us. Is this inquiry worth the months and years we pour into it? Am I genuinely contributing something that clarifies the world, or am I merely adding to the noise, to the research pollution? What am I carrying forward from those who came before me, and what should I have the courage to question or leave behind? And what good does the work place back into the community?</p>
+
+    <p>A journal may test whether an argument holds together, or we may choose to bypass the traditional machinery altogether&mdash;publishing open-access, on independent platforms, in repositories, or in formats of our own making.<span id="ref-8" class="sidenote-number"></span><span class="sidenote collapsible">This movement is acquiring more popularity. Physicists have been posting to <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a> since 1991, and mathematicians like Tim Gowers run <a href="https://gowers.wordpress.com/2016/03/01/discrete-analysis-launched/" target="_blank" rel="noopener">overlay periodicals</a> that evaluate papers without bothering to host them. In 2023, the journal <em>eLife</em> <a href="https://elifesciences.org/for-the-press/b2329859/elife-ends-accept-reject-decisions-following-peer-review" target="_blank" rel="noopener">abandoned the customary accept-or-reject verdict</a> altogether, publishing manuscripts alongside the unvarnished referee reports and leaving readers to decide for themselves. The scholarly community largely shrugged: over a hundred institutions and funders confirmed they would keep counting eLife papers. The metric-counters did not. Clarivate <a href="https://elifesciences.org/inside-elife/16afe6ec/update-on-elife-s-indexing-status-at-web-of-science" target="_blank" rel="noopener">removed the journal from the index that generates the Impact Factor</a>, on the ground that it had decoupled publication from validation by peer review, and eLife chose to lose the number rather than the model.</span> But wherever the work appears, the judgement on what to inquire into remains ours.</p>
+
+    <p>To publish with purpose requires three things of us. The first is the craft of research: doing the work rigorously, testing our claims against evidence, and making our arguments legible and useful. The second is inheritance: knowing what we have been handed, and deciding what of it to carry forward and what to correct or leave behind. The third is far more demanding: deciding for ourselves what is worth our attention, and refusing to let an exhausted, metric-driven industry decide what we ought to do, <em>think</em>.</p>
+
+    <p>Learn the rules of engagement if you choose to enter the peer-review tunnel, or build your own avenues if you do not&mdash;knowing full well that such blasphemy will attract its share of penance from the metric-counters. Make the work as rigorous and honest as it can be. But above all, choose carefully what is worth giving your attention&mdash;part of your life&mdash;to.</p>
+
+    <p>Is it genuine inquiry, or merely the performance of one, to appease the cold gods of quantity?</p>
+  </section>
+
+  <footer>
+    <a href="https://chindusree.github.io/" style="display: block; font-size: 0.75rem; font-variant: small-caps; letter-spacing: 0.12em; color: #bbb; text-decoration: none; margin-bottom: 0.375rem;" onmouseover="this.style.color='#444'" onmouseout="this.style.color='#bbb'">← Home</a>
+
+    <hr style="margin-top: 2rem; margin-bottom: 2rem; border: none; border-top: 1px solid #ccc;" />
+
+    <p class="footer-paragraph">
+      This essay is based on an invited talk delivered at the Manipal Institute of Communication, MAHE, on 16 September 2026. The sources behind the piece&mdash;plus a wealth of intriguing material unearthed along the way&mdash;are gathered in this <a href="https://notebook.google.com/notebook/d4ea986f-f161-4f17-8b6a-889e6f40b652" target="_blank" rel="noopener">notebook</a>.
+    </p>
+
+    <hr style="margin-top: 2rem; border: none; border-top: 1px solid #ccc;" />
+    <p style="font-size: 0.8rem; color: #444;">
+      <strong>Cite this as:</strong> Sreedharan, C. (2026) <em>The Cold Gods of Quantity: A Field Guide to Surviving Peer Reviews</em>. Available at:
+      <a href="https://chindusree.github.io/cold-gods-of-quantity/">https://chindusree.github.io/cold-gods-of-quantity/</a>
+    </p>
+  </footer>
+
+  <section id="endnotes">
+    <h2>Endnotes</h2>
+  </section>
+
+</body>
+</html>
