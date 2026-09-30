@@ -283,6 +283,103 @@
     @media (min-width: 901px) {
       .mobile-top-bar, nav.side-nav.mobile { display: none; }
     }
+    /* ===== Mobile note sheet (portable block) ===== */
+    .note-sheet[hidden] { display: none; }
+    .note-sheet { position: fixed; inset: 0; z-index: 2000; }
+    .note-sheet-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 18, 14, 0.32);
+      opacity: 0;
+      transition: opacity 0.24s ease;
+    }
+    .note-sheet.open .note-sheet-backdrop { opacity: 1; }
+    .note-sheet-panel {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 72vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background-color: #fdfcf9;
+      border-top: 1px solid #e6e2d8;
+      border-radius: 14px 14px 0 0;
+      box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.14);
+      padding: 0.5rem 1.5rem 2.25rem;
+      transform: translateY(100%);
+      transition: transform 0.28s ease;
+      outline: none;
+    }
+    .note-sheet.open .note-sheet-panel { transform: translateY(0); }
+    .note-sheet-grip {
+      width: 2.25rem;
+      height: 4px;
+      border-radius: 2px;
+      background: #d8d3c7;
+      margin: 0.55rem auto 1.1rem;
+    }
+    .note-sheet-label {
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+    .note-sheet-body {
+      font-size: 1rem;
+      line-height: 1.55;
+      color: #444;
+    }
+    .note-sheet-body a {
+      color: #444;
+      text-decoration: underline;
+      text-decoration-color: #bbb;
+      text-underline-offset: 3px;
+    }
+    html.sheet-open, html.sheet-open body { overflow: hidden; }
+    @media (min-width: 901px) { .note-sheet { display: none !important; } }
+    @media screen and (max-width: 900px) { #endnotes { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      .note-sheet-backdrop, .note-sheet-panel { transition: none; }
+    }
+    /* ===== Print (portable block) ===== */
+    @page { margin: 20mm; }
+    @media print {
+      html, body {
+        background: #fff !important;
+        color: #000;
+        font-size: 11pt;
+        line-height: 1.45;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+      .mobile-top-bar,
+      nav.side-nav,
+      .note-sheet,
+      .sidenote,
+      #endnotes a.return-link,
+      footer > a[href="https://chindusree.github.io/"] { display: none !important; }
+      /* the notes must survive on paper */
+      #endnotes {
+        display: block !important;
+        break-before: page;
+        margin-top: 0;
+      }
+      #endnotes h2 { font-size: 1.15rem; }
+      #endnotes div { break-inside: avoid; }
+      a { color: #000; }
+      /* a printed citation is useless without its URL */
+      p a[href^="http"]::after,
+      #endnotes a[href^="http"]::after {
+        content: " <" attr(href) ">";
+        font-size: 0.82em;
+        word-break: break-all;
+      }
+      h1, h2, .section-number { break-after: avoid; }
+      p, li { orphans: 3; widows: 3; }
+    }
     html {
       scroll-padding-top: 3rem;
     }
@@ -529,6 +626,78 @@
   <section id="endnotes">
     <h2>Endnotes</h2>
   </section>
+
+  <!-- ===== Mobile note sheet (portable block) ===== -->
+  <div class="note-sheet" id="noteSheet" hidden role="dialog" aria-modal="true" aria-labelledby="noteSheetLabel">
+    <div class="note-sheet-backdrop" data-sheet-close></div>
+    <div class="note-sheet-panel" id="noteSheetPanel" tabindex="-1">
+      <div class="note-sheet-grip" data-sheet-close></div>
+      <div class="note-sheet-label" id="noteSheetLabel">Note <span id="noteSheetNum"></span></div>
+      <div class="note-sheet-body" id="noteSheetBody"></div>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var BREAK = 900;
+    var sheet, panel, bodyEl, numEl, lastFocus, touchY = null;
+
+    function openSheet(n, html) {
+      numEl.textContent = n;
+      bodyEl.innerHTML = html;
+      lastFocus = document.activeElement;
+      sheet.hidden = false;
+      panel.scrollTop = 0;
+      document.documentElement.classList.add('sheet-open');
+      requestAnimationFrame(function () { sheet.classList.add('open'); });
+      panel.focus();
+    }
+
+    function closeSheet() {
+      if (!sheet || sheet.hidden) return;
+      sheet.classList.remove('open');
+      document.documentElement.classList.remove('sheet-open');
+      setTimeout(function () { sheet.hidden = true; bodyEl.innerHTML = ''; }, 280);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      sheet = document.getElementById('noteSheet');
+      if (!sheet) return;
+      panel  = document.getElementById('noteSheetPanel');
+      bodyEl = document.getElementById('noteSheetBody');
+      numEl  = document.getElementById('noteSheetNum');
+
+      document.addEventListener('click', function (e) {
+        if (!e.target || !e.target.closest) return;
+        if (e.target.closest('[data-sheet-close]')) { closeSheet(); return; }
+        var link = e.target.closest('.sidenote-number a');
+        if (!link || window.innerWidth > BREAK) return;
+        var n = (link.textContent || '').trim();
+        var note = document.getElementById('sidenote-' + n);
+        if (!note) return;
+        e.preventDefault();
+        openSheet(n, note.innerHTML);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' || e.key === 'Esc') closeSheet();
+      });
+
+      panel.addEventListener('touchstart', function (e) {
+        touchY = panel.scrollTop === 0 ? e.touches[0].clientY : null;
+      }, { passive: true });
+      panel.addEventListener('touchmove', function (e) {
+        if (touchY === null) return;
+        if (e.touches[0].clientY - touchY > 70) { touchY = null; closeSheet(); }
+      }, { passive: true });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > BREAK) closeSheet();
+      });
+    });
+  })();
+  </script>
 
 </body>
 </html>
