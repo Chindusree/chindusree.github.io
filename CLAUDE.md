@@ -39,6 +39,12 @@ italics or reverted an earlier agreed edit — common when the author pastes fro
 older draft — preserve the live version and *say so*, rather than silently accepting
 or silently overriding.
 
+**6. Never commit internal reports or assessments.** `.nojekyll` serves every file in
+this repo raw, at a guessable URL, with no exclude mechanism. `REPORT-*.md` and
+anything of that kind must live outside the served repo. `HANDOVER.md` and this file
+may stay — they are operational notes with nothing sensitive in them. Check before
+adding any new file at the repo root or in a new directory.
+
 ---
 
 ## Before you edit
@@ -96,10 +102,17 @@ tab.
 ## Working with the author
 
 - Short and decisive. Give a recommendation, not a menu of options.
-- Flag only what genuinely needs a ruling. Don't narrate standard practice as though
-  it were a judgement call.
 - Nothing goes live without an explicit instruction to push.
 - Tag before significant changes; the author asks for revertability by name.
+
+**Flag only genuine faults.** Do not manufacture issues, hedge, or over-qualify in
+order to look thorough. A false flag spends the author's attention and buries the real
+findings among noise. Where you are unsure whether something is wrong, say so plainly
+as uncertainty — do not assert it as a defect. The author's prose and citation choices
+stand unless you can point to a concrete, demonstrable error.
+
+Don't narrate standard practice as though it were a judgement call, either. If a thing
+is simply what one does, do it and move on.
 
 ---
 
@@ -109,6 +122,9 @@ Live tag `release-2026-10-01`. Three essays, all carrying the note sheet and pri
 stylesheet. `reimagining-university/index.html` was structurally repaired on 1 Oct and
 is now fully balanced.
 
-Open, deliberately: the *PS* journal name in Cold Gods note 1 (anachronistic, kept for
-recognition) and the reassembled Richard Smith quotation. The homepage positions its
-satellites by percentage and will need rethinking at a fourth essay.
+The author has ruled on the open editorial items. They are settled; do not reopen them
+or re-flag them. Detail sits in the publication report, which is kept outside this
+repo.
+
+The one genuinely open structural matter: the homepage positions its satellites by
+percentage and will need rethinking rather than extending at a fourth essay.
