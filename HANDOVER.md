@@ -3,6 +3,10 @@
 Plain static site on GitHub Pages. No build step, no framework, no dependencies.
 Push to `main` and it is live in about a minute.
 
+> **If you are an AI coding agent, read `CLAUDE.md` first.** It carries the hard
+> rules and the verification procedure in short form. This file is the detail
+> behind them.
+
 ---
 
 ## 1. Layout
@@ -221,7 +225,40 @@ percentage and will crowd if a fourth piece is added.
 
 ---
 
-## 10. Recovery
+## 10. Verifying a change
+
+Nothing here has tests, so verification is manual and worth doing the same way each
+time. Serve locally, then drive the page in headless Chrome through an iframe harness
+— an iframe gives a true narrow viewport, which `--window-size` cannot, since Chrome
+clamps headless windows at 500px wide.
+
+Assert on every change touching notes or layout:
+
+- superscripts and `data-number`s both run `1..N`, no gaps
+- endnote count equals sidenote count
+- `documentElement.scrollWidth == clientWidth` at 390px
+- tags balanced, no duplicate ids
+- sheet opens with the right note below 900px; `display:none` above it
+- desktop margin sidenote still reveals on click
+
+**For structural edits to a published page, prove the rendering did not move.** Hash
+the rendered text before and after:
+
+```js
+var txt = document.body.innerText.replace(/\s+/g,' ').trim();
+var h=0; for (var i=0;i<txt.length;i++) h=((h<<5)-h+txt.charCodeAt(i))|0;
+```
+
+Identical hash plus identical paragraph count proves the markup changed and the reader
+experience did not. This is how the 1 Oct repairs to *Age of Generation* were cleared:
+76,553 characters, 197 paragraphs, 51 notes, same hash before and after.
+
+For print, render to PDF — `--headless=new --print-to-pdf` applies print CSS — and read
+the last pages to confirm the endnotes and their URLs are there.
+
+---
+
+## 11. Recovery
 
 Tags mark the state before each significant change:
 
