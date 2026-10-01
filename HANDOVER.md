@@ -8,6 +8,7 @@ Push to `main` and it is live in about a minute.
 ## 1. Layout
 
 ```
+.nojekyll                       disables the Jekyll build — see §7
 index.html                      homepage — one centred piece, two satellites
 cold-gods-of-quantity/          The Cold Gods of Quantity  (2026)
 walk-to-the-heavens/            A Walk to the Heavens      (2025)
@@ -149,7 +150,34 @@ Also update: `og:url`, both image URLs, the citation line, and both homepage lin
 
 ---
 
-## 7. Local preview
+## 7. Deployment, and the Jekyll trap
+
+Push to `main`; GitHub Pages serves it in under a minute. There is no CI and no
+workflow file.
+
+**`.nojekyll` must stay.** On 30 September a push sat undeployed for over fifteen
+minutes with no error — the site kept serving the previous commit, and cache-busted
+requests confirmed it was the build, not the CDN. Adding `.nojekyll` deployed the same
+commit in thirty seconds.
+
+By default Pages runs every push through Jekyll. This site uses no Jekyll feature at
+all, so that step is pure risk: a silent build failure looks exactly like a slow deploy.
+`.nojekyll` makes Pages copy the files and stop. Do not delete it.
+
+**How to tell a stalled build from a cache.** Pick a string that exists only in the new
+commit and request with a cache-buster:
+
+```bash
+curl -sSL "https://chindusree.github.io/<slug>/?cb=$RANDOM" | grep -c '<new string>'
+```
+
+If the string is absent, the commit has not deployed. The build log is under the repo's
+**Deployments** tab on github.com — not visible from the command line without an
+authorised `gh`.
+
+---
+
+## 8. Local preview
 
 ```bash
 cd ~/Projects/chindusree.github.io
@@ -163,7 +191,7 @@ macOS firewall prompt.
 
 ---
 
-## 8. Known issues
+## 9. Known issues
 
 **`reimagining-university/index.html`**
 - Unclosed `<div class="subsection">` at line ~758 — pre-dates all current work.
@@ -181,14 +209,16 @@ percentage and will crowd if a fourth piece is added.
 
 ---
 
-## 9. Recovery
+## 10. Recovery
 
 Tags mark the state before each significant change:
 
 ```
-pre-restructure-2026-09-29   six-section version of Cold Gods
-pre-bottom-sheet             before the mobile sheet
+release-2026-10-01           current live state — all three essays, sheet + print
+v-sheet-standard-2026-09-30  sheet + print ported (pre-.nojekyll)
 pre-sheet-port               before the sheet reached the other two essays
+pre-bottom-sheet             before the mobile sheet existed
+pre-restructure-2026-09-29   six-section version of Cold Gods
 ```
 
 ```bash
@@ -197,4 +227,4 @@ git checkout <tag> -- <path>      # restore one file
 
 ---
 
-*Last updated 30 September 2026.*
+*Last updated 1 October 2026.*
