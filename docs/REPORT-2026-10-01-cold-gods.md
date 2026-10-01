@@ -167,12 +167,14 @@ Documented in `HANDOVER.md` §7, with the cache-buster diagnostic.
 
 ## 7. Open items
 
-**Not fixed, pre-existing, in `reimagining-university/index.html`:**
-- Unclosed `<div class="subsection">` at ~line 758
-- Two `</head>` tags
+**`reimagining-university/index.html` — now cleared.** Five structural faults, all
+pre-existing, fixed 1 Oct: duplicate `id="ref-51"`, a second `</head>`, an unclosed
+`<div class="subsection">`, an unclosed `<section id="unmaking">`, and three unclosed
+`<p>` tags that browsers had been auto-closing.
 
-Both predate this work and were left alone as the piece is published and carries a DOI.
-Flagged for a decision rather than fixed unasked.
+The file is now balanced 23/23 `div`, 8/8 `section`, 147/147 `p`, no duplicate ids.
+No visual change: rendered `innerText` hashed identical before and after — 76,553
+characters, 197 paragraphs, 51 notes and endnotes unchanged.
 
 **Deferred by the author:**
 - The journal name in note 1 is given as *PS: Political Science & Politics*; in 1978 it

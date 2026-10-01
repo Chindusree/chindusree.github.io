@@ -193,12 +193,24 @@ macOS firewall prompt.
 
 ## 9. Known issues
 
-**`reimagining-university/index.html`**
-- Unclosed `<div class="subsection">` at line ~758 — pre-dates all current work.
-- Two `</head>` tags.
-- ~~Duplicate `id="ref-51"`~~ — fixed 30 Sep 2026. An orphaned empty marker span sat
-  just before the real one; the script matched the orphan by ID, leaving the real span
-  blank. Removing the orphan restored valid HTML with no change on screen.
+**`reimagining-university/index.html` — all cleared 1 Oct 2026.** The file is now
+fully balanced: 23/23 `div`, 8/8 `section`, 147/147 `p`, no duplicate ids, one
+`</head>`.
+
+What was wrong, and how it was fixed:
+
+- **Duplicate `id="ref-51"`** — an orphaned empty marker span sat just before the real
+  one, so the script matched the orphan by id and left the real span blank. Orphan
+  removed.
+- **Two `</head>` tags** — the second deleted.
+- **Unclosed `<div class="subsection">`** (~line 758) — closed before the epilogue.
+- **Unclosed `<section id="unmaking">`** — closed in the same place.
+- **Three unclosed `<p>`** — browsers auto-closed these, which is why nothing ever
+  looked wrong. Each `</p>` was inserted exactly where the parser already inferred it.
+
+**Verified no visual change.** Rendered `innerText` was hashed before and after: same
+76,553 characters, same hash, same 197 paragraphs, same 51 notes and endnotes. Worth
+repeating that method on any future structural edit to a published piece.
 
 It does not carry the small-caps section-opener convention consistently, and its
 sections are named (*Prologue, Genesis, Unmaking…*) rather than following the
