@@ -1,5 +1,13 @@
 # chindusree.github.io — working notes
 
+## RESUME HERE
+
+**Done:** *The Cold Gods of Quantity* published, restructured to four movements, fact-checked and live. Mobile note sheet and print stylesheet are now standard on all three essays. Repo documented (`CLAUDE.md`, this file) and structurally clean.
+**Next action:** add the Cloudflare Web Analytics beacon to the homepage, *Cold Gods* and *Walk to the Heavens* — only *Age of Generation* carries it, so three of four pages are unmeasured.
+**Then:** the estate-wide inventory and publish checklist described in `~/Downloads/LOCAL-OPS-analytics-estate-problem.md`.
+
+---
+
 Plain static site on GitHub Pages. No build step, no framework, no dependencies.
 Push to `main` and it is live in about a minute.
 
@@ -258,7 +266,14 @@ the last pages to confirm the endnotes and their URLs are there.
 
 ---
 
-## 11. Recovery
+## 11. Decisions on the record
+
+**2026-10-02: report unpublished (404); git-history purge deliberately NOT done —
+unserved is sufficient, see Local Ops. Do not re-raise.**
+
+---
+
+## 12. Recovery
 
 Tags mark the state before each significant change:
 
